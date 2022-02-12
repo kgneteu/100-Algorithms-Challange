@@ -1,4 +1,4 @@
-import { addBorder } from '../addBorder.js';
+import { addBorder } from '../src/addBorder.js';
 
 describe(addBorder.name, () => {
     it('Test 1', () => {

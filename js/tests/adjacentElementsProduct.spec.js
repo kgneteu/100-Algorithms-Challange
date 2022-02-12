@@ -6,7 +6,7 @@
 //
 // 7 and 3 produce the largest product.
 
-import { adjacentElementsProduct } from '../adjacentElementsProduct.js';
+import { adjacentElementsProduct } from '../src/adjacentElementsProduct.js';
 
 describe(adjacentElementsProduct.name, () => {
     it('Test 1', () => {
