@@ -1,5 +1,5 @@
 //You are given a two-digit integer n. Return the sum of its digits.
-import { addTwoDigits } from './addTwoDigits.js';
+import { addTwoDigits } from '../addTwoDigits.js';
 
 describe(addTwoDigits.name, () => {
     it('Test 1', () => {

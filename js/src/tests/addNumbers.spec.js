@@ -1,6 +1,6 @@
 //Write a function that returns the sum of two numbers.
 //Write a function that returns the sum of all numbers regardless of # of params.
-import { add,add2 } from './addNumbers.js';
+import { add,add2 } from '../addNumbers.js';
 describe(add.name, () => {
     it('test 1', () => {
         // act

@@ -2,10 +2,14 @@
   "name": "hac",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "dev": "node ./src/index.js",
+    "test": "jest --watch",
+    "test coverage": "jest --coverage",
+    "lint": "eslint src/*.js",
+    "lint-fix": "eslint --fix src/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +17,7 @@
     "@babel/cli": "^7.17.0",
     "@babel/core": "^7.17.2",
     "@babel/preset-env": "^7.16.11",
+    "eslint": "^8.9.0",
     "jest": "^27.5.1"
   }
 }

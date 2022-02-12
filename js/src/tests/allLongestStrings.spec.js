@@ -1,4 +1,4 @@
-import {allLongestStrings} from "./allLongestStrings.js";
+import {allLongestStrings} from "../allLongestStrings.js";
 
 describe(allLongestStrings.name, () => {
     it('Test 1', () => {
