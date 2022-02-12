@@ -26,8 +26,9 @@
 //
 // The sum of the first and second digits of the input number.
 
-export function addTwoDigits(n) {
+export function addTwoDigits(n: number) {
     let sum = 0;
     n.toString().split('').forEach(digit => sum += +digit)
     return sum;
 }
+
