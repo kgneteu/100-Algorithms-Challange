@@ -1,9 +1,9 @@
 import unittest
 
-from add_border import add_border
+from src.add_border import add_border
 
 
-class MyTestCase(unittest.TestCase):
+class TestAddBorder(unittest.TestCase):
     def test_add_border(self):
         self.assertEqual(add_border(["abd", "ded"]), ["*****", "*abd*", "*ded*", "*****"], 'should be equal')
 
