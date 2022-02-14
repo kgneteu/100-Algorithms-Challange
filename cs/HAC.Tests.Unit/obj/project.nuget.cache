@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3erzN4XfF4se3Vy3GJbH5AkMvdo7Mo2/k1AVS6oE9my0xc5ReL+uUbkGgHwnyZBj0Z6bhq69AVC/jyO2ekqANA==",
+  "dgSpecHash": "dnYqL0xoxWizeZyQKd3TACgeYFcDDiTPDdkqcImfE6bGYjrfvkcZGPvzmkNPu/99Tf1z5vUKPNyRQU9PGYmtfA==",
   "success": true,
-  "projectFilePath": "D:\\Test\\100-algorithms-challenge\\cs\\HAC\\HAC.Tests.Unit\\HAC.Tests.Unit.csproj",
+  "projectFilePath": "D:\\Test\\100-algorithms-challenge\\cs\\HAC.Tests.Unit\\HAC.Tests.Unit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mick\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\Mick\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",

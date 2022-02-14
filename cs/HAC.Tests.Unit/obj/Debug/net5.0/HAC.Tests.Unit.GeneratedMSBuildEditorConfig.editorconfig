@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = HAC.Tests.Unit
-build_property.ProjectDir = D:\Test\100-algorithms-challenge\cs\HAC\HAC.Tests.Unit\
+build_property.ProjectDir = D:\Test\100-algorithms-challenge\cs\HAC.Tests.Unit\

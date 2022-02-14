@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Test\\100-algorithms-challenge\\cs\\HAC\\HAC\\HAC.csproj": {}
+    "D:\\Test\\100-algorithms-challenge\\cs\\HAC\\HAC.csproj": {}
   },
   "projects": {
-    "D:\\Test\\100-algorithms-challenge\\cs\\HAC\\HAC\\HAC.csproj": {
+    "D:\\Test\\100-algorithms-challenge\\cs\\HAC\\HAC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test\\100-algorithms-challenge\\cs\\HAC\\HAC\\HAC.csproj",
+        "projectUniqueName": "D:\\Test\\100-algorithms-challenge\\cs\\HAC\\HAC.csproj",
         "projectName": "HAC",
-        "projectPath": "D:\\Test\\100-algorithms-challenge\\cs\\HAC\\HAC\\HAC.csproj",
+        "projectPath": "D:\\Test\\100-algorithms-challenge\\cs\\HAC\\HAC.csproj",
         "packagesPath": "C:\\Users\\Mick\\.nuget\\packages\\",
-        "outputPath": "D:\\Test\\100-algorithms-challenge\\cs\\HAC\\HAC\\obj\\",
+        "outputPath": "D:\\Test\\100-algorithms-challenge\\cs\\HAC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
