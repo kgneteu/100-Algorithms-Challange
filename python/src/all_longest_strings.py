@@ -2,7 +2,8 @@
 #
 #     Example
 #
-# For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be allLongestStrings(inputArray) = ["aba", "vcd", "aba"].
+# For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be allLongestStrings(inputArray) = ["aba",
+# "vcd", "aba"].
 #
 #     Hints
 #

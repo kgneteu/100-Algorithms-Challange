@@ -28,7 +28,6 @@
 # Return true if it is possible to remove one element from the array in order to get a strictly increasing sequence,
 # otherwise return false.
 
-
 def almost_increasing_sequence(data):
     stops = 0
     for i in range(1, len(data)):

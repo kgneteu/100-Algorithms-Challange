@@ -1,5 +1,4 @@
 import unittest
-
 from src.alternating_sums import alternating_sums
 
 

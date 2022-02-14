@@ -1,5 +1,4 @@
 import unittest
-
 from src.alphabetic_shift import alphabetic_shift
 
 

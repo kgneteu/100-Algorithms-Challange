@@ -1,5 +1,4 @@
 import unittest
-
 from src.almost_increasing_sequence import almost_increasing_sequence
 
 

@@ -1,5 +1,4 @@
 import unittest
-
 from src.adjacent_elements_product import adjacent_elements_product
 
 

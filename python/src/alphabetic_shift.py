@@ -21,6 +21,7 @@
 #
 #     [output] string
 # The result string after replacing all of its characters.
+
 def alphabetic_shift(s):
     out = ''
     for c in s:

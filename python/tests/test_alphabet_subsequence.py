@@ -1,5 +1,4 @@
 import unittest
-
 from src.alphabet_subsequence import alphabet_subsequence
 
 

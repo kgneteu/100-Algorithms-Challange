@@ -45,6 +45,7 @@
 #
 #     [output] boolean
 # true if you and your friend are equally strong, false otherwise.
+
 def are_equally_strong(your_left, your_right, friends_left, friends_right):
     your_strongest = max(your_left, your_right)
     your_weakest = min(your_left, your_right)
