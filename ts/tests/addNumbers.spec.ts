@@ -1,4 +1,4 @@
-import {add, add2} from '../src/addNumbers';
+import {add, add2} from '.../src/src/addNumbers';
 
 describe(add.name, () => {
     it('test 1', () => {

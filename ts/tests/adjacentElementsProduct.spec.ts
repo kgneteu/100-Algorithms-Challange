@@ -1,4 +1,4 @@
-import { adjacentElementsProduct } from '../src/adjacentElementsProduct';
+import { adjacentElementsProduct } from '.../src/src/adjacentElementsProduct';
 
 describe(adjacentElementsProduct.name, () => {
     it('Test 1', () => {

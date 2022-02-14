@@ -1,4 +1,4 @@
-import {addTwoDigits} from '../src/addTwoDigits';
+import {addTwoDigits} from '.../src/src/addTwoDigits';
 
 describe(addTwoDigits.name, () => {
     it('Test 1', () => {

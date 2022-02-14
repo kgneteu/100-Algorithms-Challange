@@ -1,4 +1,4 @@
-import {alternatingSums} from '../src/alternatingSums';
+import {alternatingSums} from '.../src/src/alternatingSums';
 
 describe(alternatingSums.name, () => {
     it('Test 1', () => {
