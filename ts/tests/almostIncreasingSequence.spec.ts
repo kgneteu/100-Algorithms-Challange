@@ -1,4 +1,4 @@
-import {almostIncreasingSequence} from '.../src/src/almostIncreasingSequence';
+import {almostIncreasingSequence} from '../src/almostIncreasingSequence';
 
 describe(almostIncreasingSequence.name, () => {
     it('Test 1', () => {

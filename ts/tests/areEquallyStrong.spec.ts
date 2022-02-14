@@ -1,4 +1,4 @@
-import { areEquallyStrong } from '.../src/src/areEquallyStrong';
+import { areEquallyStrong } from '../src/areEquallyStrong';
 
 describe(areEquallyStrong.name, () => {
     it('Test 1', () => {
