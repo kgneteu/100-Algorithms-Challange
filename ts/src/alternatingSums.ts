@@ -17,6 +17,7 @@
 //     45 ≤ a[i] ≤ 100.
 //
 //     [output] array.integer
+
 export function alternatingSums(data: number[]): number[] {
     let teams = [0, 0]
     for (let i = 0; i < data.length; i++) {

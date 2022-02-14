@@ -21,6 +21,7 @@
 //
 //     [output] integer
 // The largest product of adjacent elements.
+
 export function adjacentElementsProduct(a: number[]) {
     let product = a[0] * a[1];
     for (let i = 1; i < a.length - 1; i++) {

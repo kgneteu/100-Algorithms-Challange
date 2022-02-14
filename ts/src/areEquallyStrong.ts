@@ -45,6 +45,7 @@
 //
 //     [output] boolean
 // true if you and your friend are equally strong, false otherwise.
+
 export function areEquallyStrong(yourLeft: number, yourRight: number, friendsLeft: number, friendsRight: number) {
     const yourStrongest = yourLeft > yourRight ? yourLeft : yourRight;
     const yourWeakest = yourLeft <= yourRight ? yourLeft : yourRight;
