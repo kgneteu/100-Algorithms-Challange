@@ -12,8 +12,7 @@ func Map(vs []string, f func(string) string) []string {
 	return vsm
 }
 
-//Given a rectangular matrix of characters, add a border of asterisks(*) to it.
-func addBorder(picture []string) (ret []string) {
+func AddBorder(picture []string) (ret []string) {
 	wall := strings.Repeat("*", len(picture[0])+2)
 	mid := Map(picture, func(s string) string {
 		return "*" + s + "*"
