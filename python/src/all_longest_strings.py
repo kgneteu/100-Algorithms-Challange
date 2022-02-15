@@ -2,7 +2,7 @@
 #
 #     Example
 #
-# For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be allLongestStrings(inputArray) = ["aba",
+# For input_array = ["aba", "aa", "ad", "vcd", "aba"], the output should be allLongestStrings(input_array) = ["aba",
 # "vcd", "aba"].
 #
 #     Hints
@@ -11,17 +11,17 @@
 # Input/Output
 #
 #     [time limit] 4000ms (js)
-#     [input] array.string inputArray
+#     [input] array.string input_array
 # A non-empty array.
 #
 #     Guaranteed constraints:
 #
-#     1 ≤ inputArray.length ≤ 10,
+#     1 ≤ input_array.length ≤ 10,
 #
-#     1 ≤ inputArray[i].length ≤ 10.
+#     1 ≤ input_array[i].length ≤ 10.
 #
 #     [output] array.string
-# Array of the longest strings, stored in the same order as in the inputArray.
+# Array of the longest strings, stored in the same order as in the input_array.
 
 def all_longest_strings(strings):
     max_length = 0

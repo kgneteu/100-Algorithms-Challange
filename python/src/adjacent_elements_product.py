@@ -2,7 +2,7 @@
 #
 #     Example
 #
-# For inputArray = [3, 6, -2, -5, 7, 3], the output should be adjacentElementsProduct(inputArray) = 21.
+# For input_array = [3, 6, -2, -5, 7, 3], the output should be adjacentElementsProduct(input_array) = 21.
 #
 # 7 and 3 produce the largest product.
 #
@@ -12,12 +12,12 @@
 # Input/Output
 #
 #     [time limit] 4000ms (js)
-#     [input] array.integer inputArray
+#     [input] array.integer input_array
 # An array of integers containing at least two elements.
 #
 #     Guaranteed constraints:
 #
-#     2 ≤ inputArray.length ≤ 10, -1000 ≤ inputArray[i] ≤ 1000.
+#     2 ≤ input_array.length ≤ 10, -1000 ≤ input_array[i] ≤ 1000.
 #
 #     [output] integer
 # The largest product of adjacent elements.
