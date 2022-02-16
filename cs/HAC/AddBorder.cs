@@ -25,9 +25,9 @@
 //
 //     Guaranteed constraints:
 //
-//     1 ≤ picture.length ≤ 5,
+//     1 ≤ picture.Length ≤ 5,
 //
-//     1 ≤ picture[i].length ≤ 5.
+//     1 ≤ picture[i].Length ≤ 5.
 //
 //     [output] array.string
 // The same matrix of characters, framed with a border of asterisks of width 1.
@@ -37,7 +37,7 @@ using System.Linq;
 
 namespace HAC
 {
-    public partial class HAC
+    public static partial class HAC
     {
         public static string[] AddBorder(string[] picture)
         {

@@ -1,4 +1,4 @@
-import { absoluteValuesSumMinimization } from '../src/absoluteValuesSumMinization';
+import { absoluteValuesSumMinimization } from '../src/absoluteValuesSumMinimization.js';
 
 describe(absoluteValuesSumMinimization.name, () => {
     it('Test 1', () => {
