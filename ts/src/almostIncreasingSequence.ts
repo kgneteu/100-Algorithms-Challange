@@ -28,11 +28,11 @@
 export function almostIncreasingSequence(data: number[]): boolean {
     let stops = 0;
 
-    for (let i = 1; i <= data.length; i++) {
+    for (let i = 1; i < data.length; i++) {
         if (data[i] <= data[i - 1]) {
             stops++;
             if (stops > 1) return false
-            if ((i + 1 <= data.length) && (data[i + 1] <= data[i - 1])) {
+            if ((i + 1 < data.length) && (data[i + 1] <= data[i - 1])) {
                 return false
             }
         }
