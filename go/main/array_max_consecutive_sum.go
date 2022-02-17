@@ -32,27 +32,29 @@
 // The maximal possible sum.
 
 package main
-func arrayMaxConsecutiveSum(inputArray, k) {
-     sum = 0
-    for ( i = 0 i < k i++) {
-        sum += inputArray[i]
-    }
-     max = sum
-    for ( i = k i < inputArray.length i++) {
-        sum -= inputArray[i - k]
-        sum += inputArray[i]
-        if (sum > max) max = sum
-    }
-    return max
 
-    //Alt:
-    //  result = 0
-    // for ( i = 0 i < inputArray.length - k i++) {
-    //     const s = inputArray.slice(i, i + k).reduce((acc, v) => acc + v)
-    //     if (result < s) {
-    //         result = s
-    //     }
-    // }
-    // return result
+func ArrayMaxConsecutiveSum(inputArray []int, k int) int {
+	sum := 0
+	for i := 0; i < k; i++ {
+		sum += inputArray[i]
+	}
+	max := sum
+	for i := k; i < len(inputArray); i++ {
+		sum -= inputArray[i-k]
+		sum += inputArray[i]
+		if sum > max {
+			max = sum
+		}
+	}
+	return max
+
+	//Alt:
+	//  result = 0
+	// for ( i = 0 i < inputArray.length - k i++) {
+	//     const s = inputArray.slice(i, i + k).reduce((acc, v) => acc + v)
+	//     if (result < s) {
+	//         result = s
+	//     }
+	// }
+	// return result
 }
-

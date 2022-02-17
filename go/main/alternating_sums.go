@@ -17,11 +17,13 @@
 //     45 ≤ a[i] ≤ 100.
 //
 //     [output] array.integer
+
 package main
-func alternatingSums(data) {
-     teams = [0, 0]
-    for ( i = 0 i < data.length i++) {
-        teams[(i % 2)] = teams[(i % 2)] + data[i]
-    }
-    return teams
+
+func AlternatingSums(data []int) []int {
+	teams := []int{0, 0}
+	for i := 0; i < len(data); i++ {
+		teams[(i % 2)] = teams[(i%2)] + data[i]
+	}
+	return teams
 }

@@ -10,7 +10,6 @@ func TestAlternatingSums(t *testing.T) {
 	got := AlternatingSums(data)
 	want := []int{180, 105}
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("AlternatingSums(#{data}) = #{got} want #{want}")
+		t.Errorf("AlternatingSums(%v) = %v want %v", data, got, want)
 	}
 }
-

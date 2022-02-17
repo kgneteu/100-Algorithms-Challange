@@ -32,8 +32,23 @@
 //
 //     [output] array.integer
 package main
-func arrayReplace(inputArray, elemToReplace, substitutionElem) {
-    return inputArray.map(v => v === elemToReplace ? substitutionElem : v)
+
+func MapInt(vs []int, f func(int) int) []int {
+	vsm := make([]int, len(vs))
+	for i, v := range vs {
+		vsm[i] = f(v)
+	}
+	return vsm
+}
+
+func ArrayReplace(inputArray []int, elemToReplace int, substitutionElem int) []int {
+	return MapInt(inputArray, func(v int) int {
+		if v == elemToReplace {
+			return substitutionElem
+		} else {
+			return v
+		}
+	})
 }
 
 // console.log(arrayReplace([1, 2, 1], 1, 3))

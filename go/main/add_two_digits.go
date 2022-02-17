@@ -25,9 +25,19 @@
 //     [output] integer
 //
 // The sum of the first and second digits of the input number.
+
 package main
-func AddTwoDigits(n int)int {
-     sum := 0
-    n.toString().split('').forEach(digit => sum += +digit)
-    return sum
+
+import (
+	"strconv"
+	"strings"
+)
+
+func AddTwoDigits(n int) int {
+	sum := 0
+	str := strconv.Itoa(n)
+	arr := strings.Split(str, "")
+	println(arr)
+	//n.toString().split('').forEach(digit => sum += +digit)
+	return sum
 }

@@ -24,14 +24,17 @@
 //     [output] integer
 //
 // The sum of the two inputs.
+
 package main
 
-func Add(a, b) int {
+func Add(a int, b int) int {
 	return a + b
 }
 
-func Add2(n... int) int {
-	return n.reduce(
-		(p, c) = > p + c, 0
-	)
+func Add2(n ...int) int {
+	sum := 0
+	for _, v := range n {
+		sum += v
+	}
+	return sum
 }

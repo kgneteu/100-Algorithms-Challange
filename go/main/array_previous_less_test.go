@@ -10,6 +10,6 @@ func TestArrayPreviousLess(t *testing.T) {
 	got := ArrayPreviousLess(data)
 	want := []int{-1, 3, -1, 2, 4}
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("ArrayPreviousLess(#{data}) = #{got} want #{want}")
+		t.Errorf("ArrayPreviousLess(%v) = %v want %v", data, got, want)
 	}
 }

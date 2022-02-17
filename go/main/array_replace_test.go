@@ -10,7 +10,6 @@ func TestArrayReplace(t *testing.T) {
 	got := ArrayReplace(data, 5, 8)
 	want := []int{3, 8, 2, 4, 8}
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("ArrayReplace(#{data}, 5, 8) = #{got} want #{want}")
+		t.Errorf("ArrayReplace(%v, 5, 8) = %v want %v", data, got, want)
 	}
 }
-

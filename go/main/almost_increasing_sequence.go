@@ -24,17 +24,21 @@
 //     [output] boolean
 //
 // Return true if it is possible to remove one element from the array in order to get a strictly increasing sequence, otherwise return false.
+
 package main
-func almostIncreasingSequence(data) {
-     stops = 0
-    for ( i = 1 i < data.length i++) {
-        if (data[i] <= data[i - 1]) {
-            stops++
-            if (stops > 1) return false
-            if ((i + 1 < data.length) && (data[i + 1] <= data[i - 1])) {
-                return false
-            }
-        }
-    }
-    return true
+
+func AlmostIncreasingSequence(data []int) bool {
+	stops := 0
+	for i := 1; i < len(data); i++ {
+		if data[i] <= data[i-1] {
+			stops++
+			if stops > 1 {
+				return false
+			}
+		}
+		if i+1 < len(data) && data[i+1] <= data[i-1] {
+			return false
+		}
+	}
+	return true
 }

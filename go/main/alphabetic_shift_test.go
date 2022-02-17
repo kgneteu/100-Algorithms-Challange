@@ -10,6 +10,6 @@ func TestAlphabeticShift(t *testing.T) {
 	got := AlphabeticShift(data)
 	want := "dsbaz"
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("AlphabeticShift(#{data}) = #{got} want #{want}")
+		t.Errorf("AlphabeticShift(%v) = %v want %v", data, got, want)
 	}
 }

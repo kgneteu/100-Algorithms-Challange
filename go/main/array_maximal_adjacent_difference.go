@@ -26,13 +26,24 @@
 // The maximal absolute difference.
 //
 
-func arrayMaximalAdjacentDifference(inputArray) {
-     maxDiff = Math.abs(inputArray[1] - inputArray[0])
-    for ( i = 2 i < inputArray.length i++) {
-        const diff = Math.abs(inputArray[i] - inputArray[i - 1])
-        if (diff > maxDiff) maxDiff = diff
-    }
-    return maxDiff
+package main
+
+func Abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
+}
+
+func ArrayMaximalAdjacentDifference(inputArray []int) int {
+	maxDiff := Abs(inputArray[1] - inputArray[0])
+	for i := 2; i < len(inputArray); i++ {
+		diff := Abs(inputArray[i] - inputArray[i-1])
+		if diff > maxDiff {
+			maxDiff = diff
+		}
+	}
+	return maxDiff
 }
 
 // console.log(arrayMaximalAdjacentDifference([2, 4, 1, 0]))

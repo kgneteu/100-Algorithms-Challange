@@ -22,12 +22,16 @@
 //     [output] boolean
 //
 // true if the given string is a subsequence of the alphabet, false otherwise.
+
 package main
-func alphabetSubsequence(s) {
-    for ( i = 1 i < s.length i++) {
-        if (s.charCodeAt(i) <= s.charCodeAt(i - 1)) {
-            return false
-        }
-    }
-    return true
+
+func AlphabetSubsequence(s string) bool {
+	for i := 1; i < len(s); i++ {
+		if s[i] <= s[i-1] {
+			{
+				return false
+			}
+		}
+	}
+	return true
 }

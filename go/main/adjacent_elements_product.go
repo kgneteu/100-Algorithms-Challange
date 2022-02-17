@@ -24,7 +24,7 @@
 
 package main
 
-func adjacentElementsProduct(a []int) int {
+func AdjacentElementsProduct(a []int) int {
 	product := a[0] * a[1]
 	for i := 1; i < len(a)-1; i++ {
 		if a[i]*a[+i+1] > product {

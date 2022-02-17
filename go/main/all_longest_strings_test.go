@@ -10,7 +10,6 @@ func TestAllLongestStrings(t *testing.T) {
 	got := AllLongestStrings(data)
 	want := []string{"aba", "vcd", "aba"}
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("AllLongestStrings(#{data}) = #{got} want #{want}")
+		t.Errorf("AllLongestStrings(%v) = %v want %v", data, got, want)
 	}
 }
-

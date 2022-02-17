@@ -19,18 +19,19 @@
 //     [output] integer
 // The minimal number of moves needed to obtain a strictly increasing sequence from inputArray. It's guaranteed that for the given test cases the answer always fits signed 32-bit integer type.
 package main
-func arrayChange(inputArray) {
-     moves = 0
-     prevValue = inputArray[0]
-    for ( i = 1 i < inputArray.length i++) {
-        if (inputArray[i] <= prevValue) {
-            moves += prevValue - inputArray[i] + 1
-            prevValue = inputArray[i] + prevValue - inputArray[i] + 1
-        } else {
-            prevValue = inputArray[i]
-        }
-    }
-    return moves
+
+func ArrayChange(inputArray []int) int {
+	moves := 0
+	prevValue := inputArray[0]
+	for i := 1; i < len(inputArray); i++ {
+		if inputArray[i] <= prevValue {
+			moves += prevValue - inputArray[i] + 1
+			prevValue = inputArray[i] + prevValue - inputArray[i] + 1
+		} else {
+			prevValue = inputArray[i]
+		}
+	}
+	return moves
 }
 
 // console.log(arrayChange([1, 1, 1]))

@@ -10,6 +10,6 @@ func TestAddTwoDigits(t *testing.T) {
 	got := AddTwoDigits(data)
 	want := 11
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("AddTwoDigits(#{data}) = #{got} want #{want}")
+		t.Errorf("AddTwoDigits(%v) = %v want %v", data, got, want)
 	}
 }

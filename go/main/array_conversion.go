@@ -28,21 +28,23 @@
 //     -9 ≤ inputArray[i] ≤ 99.
 //
 //     [output] integer
+
 package main
-func arrayConversion(inputArray) {
-     outputArray = inputArray
-     oddPass = true
-    while (outputArray.length > 1) {
-        const workArray = []
-        for ( i = 0 i < outputArray.length i += 2) {
-            if (oddPass) {
-                workArray.push(outputArray[i] + outputArray[i + 1])
-            } else {
-                workArray.push(outputArray[i] * outputArray[i + 1])
-            }
-        }
-        oddPass = !oddPass
-        outputArray = workArray
-    }
-    return outputArray[0]
+
+func ArrayConversion(inputArray []int) int {
+	outputArray := inputArray
+	//oddPass := true
+	//while len(outputArray) > 1 {
+	//    var workArray []int
+	//    for i := 0; i < len(outputArray); i += 2 {
+	//        if oddPass {
+	//            workArray = append(workArray, outputArray[i] + outputArray[i + 1])
+	//        } else {
+	//            workArray.push(outputArray[i] * outputArray[i + 1])
+	//        }
+	//    }
+	//    oddPass = !oddPass
+	//    outputArray = workArray
+	//}
+	return outputArray[0]
 }

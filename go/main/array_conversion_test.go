@@ -10,7 +10,6 @@ func TestArrayConversion(t *testing.T) {
 	got := ArrayConversion(data)
 	want := 186
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("ArrayConversion(#{data}) = #{got} want #{want}")
+		t.Errorf("ArrayConversion(%v) = %v want %v", data, got, want)
 	}
 }
-

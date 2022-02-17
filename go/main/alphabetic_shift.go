@@ -21,15 +21,17 @@
 //
 //     [output] string
 // The result string after replacing all of its characters.
+
 package main
-func alphabeticShift(s) {
-     out = ''
-    for ( c of s) {
-        if (c === 'z') {
-            out += 'a'
-        } else {
-            out += String.fromCharCode((c.charCodeAt(0) + 1))
-        }
-    }
-    return out
+
+func AlphabeticShift(s string) string {
+	result := ""
+	for c := range s {
+		if c == 'z' {
+			result += "a"
+		} else {
+			result += string(rune(int(c) + 1))
+		}
+	}
+	return result
 }

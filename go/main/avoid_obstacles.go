@@ -29,15 +29,17 @@
 //     [output] integer
 // The desired length.
 //
-package main
-func avoidObstacles(inputArray) {
-    const max = Math.max(...inputArray)
-     minLength = max + 1
-    for ( i = 2 i < max - 1 i++) {
-        if (inputArray.every(v => v % i !== 0)) {
-            return i
-        }
-    }
-    return minLength
-}
 
+package main
+
+func AvoidObstacles(inputArray []int) int {
+	//max = Math.max(...inputArray)
+	max := 0
+	minLength := max + 1
+	for i := 2; i < max-1; i++ {
+		//if (inputArray.every(v => v % i !== 0)) {
+		//    return i
+		//}
+	}
+	return minLength
+}

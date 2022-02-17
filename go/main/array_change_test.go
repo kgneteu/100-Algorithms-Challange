@@ -10,6 +10,6 @@ func TestArrayChange(t *testing.T) {
 	got := ArrayChange(data)
 	want := 3
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("ArrayChange(#{data}) = #{got} want #{want}")
+		t.Errorf("ArrayChangeg(%v) = %v want %v", data, got, want)
 	}
 }

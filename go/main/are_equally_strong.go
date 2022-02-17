@@ -45,11 +45,34 @@
 //
 //     [output] boolean
 // true if you and your friend are equally strong, false otherwise.
+
 package main
-func areEquallyStrong(yourLeft, yourRight, friendsLeft, friendsRight) {
-    const yourStrongest = yourLeft > yourRight ? yourLeft : yourRight
-    const yourWeakest = yourLeft <= yourRight ? yourLeft : yourRight
-    const friendsStrongest = friendsLeft > friendsRight ? friendsLeft : friendsRight
-    const friendsWeakest = friendsLeft <= friendsRight ? friendsLeft : friendsRight
-    return (yourStrongest === friendsStrongest && yourWeakest === friendsWeakest)
+
+func AreEquallyStrong(yourLeft int, yourRight int, friendsLeft int, friendsRight int) bool {
+	var yourStrongest int
+	if yourLeft > yourRight {
+		yourStrongest = yourLeft
+	} else {
+		yourStrongest = yourRight
+	}
+	var yourWeakest int
+	if yourLeft <= yourRight {
+		yourWeakest = yourLeft
+	} else {
+		yourWeakest = yourRight
+	}
+
+	var friendsStrongest int
+	if friendsLeft > friendsRight {
+		friendsStrongest = friendsLeft
+	} else {
+		friendsStrongest = friendsRight
+	}
+	var friendsWeakest int
+	if friendsLeft <= friendsRight {
+		friendsWeakest = friendsLeft
+	} else {
+		friendsWeakest = friendsRight
+	}
+	return yourStrongest == friendsStrongest && yourWeakest == friendsWeakest
 }

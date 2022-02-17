@@ -10,7 +10,6 @@ func TestAdjacentElementsProduct(t *testing.T) {
 	got := AdjacentElementsProduct(data)
 	want := 21
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("AdjacentElementsProduct(#{data}) = #{got} want #{want}")
+		t.Errorf("AdjacentElementsProduct(%v) = %v want %v", data, got, want)
 	}
 }
-

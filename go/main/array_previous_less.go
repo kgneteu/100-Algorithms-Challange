@@ -29,32 +29,35 @@
 //
 // Array containing answer values computed as described above.
 //
-package main
-func arrayPreviousLess(items) {
-    const out = []
-    for ( i = items.length - 1 i > 0 i--) {
-        for ( k = i - 1 k >= 0 k--) {
-            if (items[k] < items[i]) {
-                out.unshift(items[k])
-                break
-            } else if (k === 0) {
-                out.unshift(-1)
-            }
-        }
-    }
-    out.unshift(-1)
-    return out
 
-    // ver. without unshift
-    // const out = [-1]
-    // for ( i = 1 i < items.length i++) {
-    //      v = -1
-    //     for ( k = i - 1 k >= 0 k--) {
-    //        if (items[k]<items[i]){
-    //            v = items[k]
-    //            break
-    //        }
-    //     }
-    //     out.push(v)
-    // }
+package main
+
+func ArrayPreviousLess(items []int) []int {
+	result := []int{}
+	//for i := len(items) - 1; i > 0; i-- {
+	//    for ( k = i - 1 k >= 0 k--) {
+	//        if (items[k] < items[i]) {
+	//            result.unshift(items[k])
+	//            break
+	//        } else if (k === 0) {
+	//            result.unshift(-1)
+	//        }
+	//    }
+	//}
+	//out.unshift(-1)
+
+	return result
+
+	// ver. without unshift
+	// const out = [-1]
+	// for ( i = 1 i < items.length i++) {
+	//      v = -1
+	//     for ( k = i - 1 k >= 0 k--) {
+	//        if (items[k]<items[i]){
+	//            v = items[k]
+	//            break
+	//        }
+	//     }
+	//     out.push(v)
+	// }
 }

@@ -41,18 +41,20 @@
 //     [output] boolean
 //
 // true if a and b are similar, false otherwise.
+
 package main
-func areSimilar(a, b) {
-     swapped = false
-    for ( i = 0 i < a.length i++) {
-        if (a[i] !== b[i]) {
-            if (!swapped && (i + 1 < a.length) && a[i + 1] === b[i] && a[i] === b[i + 1]) {
-                swapped = true
-                i += 1
-            } else {
-                return false
-            }
-        }
-    }
-    return true
+
+func AreSimilar(a []int, b []int) bool {
+	swapped := false
+	for i := 0; i < len(a); i++ {
+		if a[i] != b[i] {
+			if !swapped && i+1 < len(a) && a[i+1] == b[i] && a[i] == b[i+1] {
+				swapped = true
+				i += 1
+			} else {
+				return false
+			}
+		}
+	}
+	return true
 }

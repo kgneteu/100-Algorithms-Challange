@@ -1,5 +1,3 @@
-//Write a function that returns the sum of two numbers.
-//Write a function that returns the sum of all numbers regardless of # of params.
 import {add, add2} from '../src/addNumbers.js';
 
 describe(add.name, () => {

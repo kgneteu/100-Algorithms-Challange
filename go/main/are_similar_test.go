@@ -11,7 +11,7 @@ func TestAreSimilar(t *testing.T) {
 	got := AreSimilar(data1, data2)
 	want := true
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("1.AreSimilar(#{data1},#{data2}) = #{got} want #{want}")
+		t.Errorf("1.AreSimilar(%v,%v) = %v want %v", data1, data2, got, want)
 	}
 
 	data1 = []int{1, 2, 3}
@@ -19,7 +19,7 @@ func TestAreSimilar(t *testing.T) {
 	got = AreSimilar(data1, data2)
 	want = true
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("2.AreSimilar(#{data1},#{data2}) = #{got} want #{want}")
+		t.Errorf("2.AreSimilar(%v,%v) = %v want %v", data1, data2, got, want)
 	}
 
 	data1 = []int{1, 2, 2}
@@ -27,6 +27,6 @@ func TestAreSimilar(t *testing.T) {
 	got = AreSimilar(data1, data2)
 	want = false
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("3.AreSimilar(#{data1},#{data2}) = #{got} want #{want}")
+		t.Errorf("3.AreSimilar(%v,%v) = %v want %v", data1, data2, got, want)
 	}
 }
