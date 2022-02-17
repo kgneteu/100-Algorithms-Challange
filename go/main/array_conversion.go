@@ -33,18 +33,18 @@ package main
 
 func ArrayConversion(inputArray []int) int {
 	outputArray := inputArray
-	//oddPass := true
-	//while len(outputArray) > 1 {
-	//    var workArray []int
-	//    for i := 0; i < len(outputArray); i += 2 {
-	//        if oddPass {
-	//            workArray = append(workArray, outputArray[i] + outputArray[i + 1])
-	//        } else {
-	//            workArray.push(outputArray[i] * outputArray[i + 1])
-	//        }
-	//    }
-	//    oddPass = !oddPass
-	//    outputArray = workArray
-	//}
+	oddPass := true
+	for len(outputArray) > 1 {
+		var workArray []int
+		for i := 0; i < len(outputArray); i += 2 {
+			if oddPass {
+				workArray = append(workArray, outputArray[i]+outputArray[i+1])
+			} else {
+				workArray = append(workArray, outputArray[i]*outputArray[i+1])
+			}
+		}
+		oddPass = !oddPass
+		outputArray = workArray
+	}
 	return outputArray[0]
 }

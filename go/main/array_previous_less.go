@@ -33,31 +33,17 @@
 package main
 
 func ArrayPreviousLess(items []int) []int {
-	result := []int{}
-	//for i := len(items) - 1; i > 0; i-- {
-	//    for ( k = i - 1 k >= 0 k--) {
-	//        if (items[k] < items[i]) {
-	//            result.unshift(items[k])
-	//            break
-	//        } else if (k === 0) {
-	//            result.unshift(-1)
-	//        }
-	//    }
-	//}
-	//out.unshift(-1)
-
+	var result []int
+	for i := len(items) - 1; i > 0; i-- {
+		for k := i - 1; k >= 0; k-- {
+			if items[k] < items[i] {
+				result = append([]int{items[k]}, result...)
+				break
+			} else if k == 0 {
+				result = append([]int{-1}, result...)
+			}
+		}
+	}
+	result = append([]int{-1}, result...)
 	return result
-
-	// ver. without unshift
-	// const out = [-1]
-	// for ( i = 1 i < items.length i++) {
-	//      v = -1
-	//     for ( k = i - 1 k >= 0 k--) {
-	//        if (items[k]<items[i]){
-	//            v = items[k]
-	//            break
-	//        }
-	//     }
-	//     out.push(v)
-	// }
 }

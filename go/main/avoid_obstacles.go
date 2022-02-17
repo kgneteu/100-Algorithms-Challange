@@ -33,13 +33,25 @@
 package main
 
 func AvoidObstacles(inputArray []int) int {
-	//max = Math.max(...inputArray)
-	max := 0
+	max := inputArray[0]
+	for _, v := range inputArray {
+		if v > max {
+			max = v
+		}
+	}
+
 	minLength := max + 1
 	for i := 2; i < max-1; i++ {
-		//if (inputArray.every(v => v % i !== 0)) {
-		//    return i
-		//}
+		crash := false
+		for _, v := range inputArray {
+			if v%i == 0 {
+				crash = true
+				break
+			}
+		}
+		if !crash {
+			return i
+		}
 	}
 	return minLength
 }

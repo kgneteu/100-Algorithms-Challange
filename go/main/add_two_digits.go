@@ -34,10 +34,12 @@ import (
 )
 
 func AddTwoDigits(n int) int {
-	sum := 0
+	var result int
 	str := strconv.Itoa(n)
 	arr := strings.Split(str, "")
-	println(arr)
-	//n.toString().split('').forEach(digit => sum += +digit)
-	return sum
+	for _, c := range arr {
+		s, _ := strconv.Atoi(c)
+		result += s
+	}
+	return result
 }

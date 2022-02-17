@@ -25,8 +25,8 @@
 package main
 
 func AlphabeticShift(s string) string {
-	result := ""
-	for c := range s {
+	var result string
+	for _, c := range s {
 		if c == 'z' {
 			result += "a"
 		} else {
