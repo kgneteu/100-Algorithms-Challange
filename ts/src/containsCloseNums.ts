@@ -34,7 +34,15 @@
 //     [output] boolean
 
 export function containsCloseNums(nums: number[], k: number): boolean {
-
+    for (let i = 0; i < nums.length - 1; i++) {
+        let maxIndex = i + k + 1 <= nums.length ? i + k + 1 : nums.length;
+        for (let j = i + 1; j < maxIndex; j++) {
+            if (nums[i] === nums[j]) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 // console.log(containsCloseNums([0, 1, 2, 3, 5, 2], 3));

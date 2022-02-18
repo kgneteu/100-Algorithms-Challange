@@ -33,16 +33,29 @@
 //     otherwise return false.
 
 export function convertString(s: string, t: string): boolean {
+    let word = '';
     let index = 0;
-    for (let c of t) {
-        for (let k = index; k < s.length; k++) {
+    for (let c of s) {
+        if (c == t[index]) {
+            word = word.concat(c)
+            if (word === t) return true;
             index++;
-            if (c==s[index-1]) break;
         }
-        if (index>=s.length) return false;
     }
-    return true;
+    return false;
+    //alt:
+    // let index = 0;
+    // for (let c of t) {
+    //     let found = false
+    //     for (let k = index; k < s.length; k++) {
+    //         index++;
+    //         if (c == s[k]) {
+    //             found = true;
+    //             break;
+    //         }
+    //     }
+    //     if (!found) return false;
+    // }
+    // return true;
 }
 
-// console.log(convertString('ceoydefthf5iyg5h5yts', 'codefights'));
-// console.log(convertString('addbyca', 'abcd'));

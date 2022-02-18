@@ -12,4 +12,14 @@ describe(centuryFromYear.name, () => {
         const response = centuryFromYear(data);
         expect(response).toBe(17);
     });
+    it('Test 3', () => {
+        const data = 1701;
+        const response = centuryFromYear(data);
+        expect(response).toBe(18);
+    });
+    it('Test 4', () => {
+        const data = 1699;
+        const response = centuryFromYear(data);
+        expect(response).toBe(17);
+    });
 });

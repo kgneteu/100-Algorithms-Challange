@@ -27,9 +27,7 @@
 //
 
 export function checkPalindrome(inputString: string): boolean {
-
+    let s1 = inputString.toLowerCase();
+    let s2 = s1.split("").reverse().join("");
+    return s1 == s2;
 }
-
-// console.log(checkPalindrome('aabaa'));
-// console.log(checkPalindrome('abac'));
-// console.log(checkPalindrome('a'));

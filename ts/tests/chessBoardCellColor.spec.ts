@@ -14,4 +14,11 @@ describe(chessBoardCellColor.name, () => {
         const response = chessBoardCellColor(cell1, cell2);
         expect(response).toBe(false);
     });
+
+    it('Test 3', () => {
+        const cell1 = 'A4';
+        const cell2 = 'H7';
+        const response = chessBoardCellColor(cell1, cell2);
+        expect(response).toBe(true);
+    });
 });

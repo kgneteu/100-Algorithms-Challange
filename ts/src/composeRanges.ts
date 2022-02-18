@@ -3,7 +3,8 @@
 //
 //     Example
 //
-// For nums = [-1, 0, 1, 2, 6, 7, 9], the output should be composeRanges(nums) = ["-1->2", "6->7", "9"].
+// For nums = [-1, 0, 1, 2, 6, 7, 9], the output should be
+// composeRanges(nums) = ["-1->2", "6->7", "9"].
 //     Hints
 //
 // push()
@@ -20,7 +21,22 @@
 //     [output] array.string
 
 export function composeRanges(nums: number[]): string[] {
+    let ranges = [];
+    let rangeStart = nums[0];
+    for (let i = 0; i < nums.length - 1; i++) {
+        if (nums[i] + 1 != nums[i + 1]) {
+            ranges.push([rangeStart, nums[i]])
+            rangeStart = nums[i + 1];
+        }
+    }
+    ranges.push([rangeStart, nums[nums.length - 1]])
 
+    return ranges.map(range => {
+        if (range[0] == range[1]) {
+            return range[0].toString()
+        } else {
+            return `${range[0]}->${range[1]}`
+        }
+    })
 }
 
-// console.log(composeRanges([-1, 0, 1, 2, 6, 7, 9]));

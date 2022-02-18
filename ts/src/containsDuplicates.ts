@@ -37,5 +37,3 @@ export function containsDuplicates(a: number[]): boolean {
     return false;
 }
 
-// console.log(containsDuplicates([1, 2, 3, 1]));
-// console.log(containsDuplicates([3, 1]));

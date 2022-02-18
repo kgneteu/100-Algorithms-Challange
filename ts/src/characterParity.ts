@@ -18,14 +18,11 @@
 
 export function characterParity(symbol: string): string {
     let v = parseInt(symbol);
-    if (isNaN(v)) return "not a digit";
-    if (v % 2 === 0) {
-        return "even"
+    if (isNaN(v)) {
+        return "not a digit";
+    } else if (v % 2 == 0) {
+        return "even";
     } else {
         return "odd";
     }
 }
-
-// console.log(characterParity('5'))
-// console.log(characterParity('8'))
-// console.log(characterParity('q'))
