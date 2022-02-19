@@ -2,7 +2,6 @@ import { incrementalBackups } from '../src/incrementalBackups';
 
 describe(incrementalBackups.name, () => {
     it('Test 1', () => {
-       
         const lastBackupTime = 461620205;
         const changes = [
             [461620203, 1],
@@ -13,11 +12,7 @@ describe(incrementalBackups.name, () => {
             [461620207, 5],
             [461620208, 1]
         ];
-
-   
         const response = incrementalBackups(lastBackupTime, changes);
-
- 
         expect(response).toEqual([1, 3, 5]);
     });
 });

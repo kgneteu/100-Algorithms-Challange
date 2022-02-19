@@ -33,7 +33,7 @@
 //     otherwise return false.
 
 export function convertString(s: string, t: string): boolean {
-    let word = '';
+    let word = "";
     let index = 0;
     for (let c of s) {
         if (c == t[index]) {
