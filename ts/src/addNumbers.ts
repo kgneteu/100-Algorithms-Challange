@@ -30,7 +30,7 @@ export function add(a: number, b: number): number {
 }
 
 
-export function add2(...n: number[]):number {
+export function add2(...n: number[]): number {
     return n.reduce(
         (p, c) => p + c, 0
     )

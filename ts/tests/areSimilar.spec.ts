@@ -1,4 +1,4 @@
-import { areSimilar } from '../src/areSimilar';
+import {areSimilar} from '../src/areSimilar';
 
 describe(areSimilar.name, () => {
     it('Test 1', () => {

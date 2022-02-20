@@ -1,4 +1,4 @@
-import { firstDuplicate } from '../src/firstDuplicate';
+import {firstDuplicate} from '../src/firstDuplicate';
 
 describe(firstDuplicate.name, () => {
     it('Test 1', () => {

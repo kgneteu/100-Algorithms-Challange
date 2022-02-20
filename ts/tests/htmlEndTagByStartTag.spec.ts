@@ -1,4 +1,4 @@
-import { htmlEndTagByStartTag } from '../src/htmlEndTagByStartTag';
+import {htmlEndTagByStartTag} from '../src/htmlEndTagByStartTag';
 
 describe(htmlEndTagByStartTag.name, () => {
     it('Test 1', () => {

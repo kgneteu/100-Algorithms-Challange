@@ -1,4 +1,4 @@
-import { arrayMaxConsecutiveSum } from '../src/arrayMaxConsecutiveSum';
+import {arrayMaxConsecutiveSum} from '../src/arrayMaxConsecutiveSum';
 
 describe(arrayMaxConsecutiveSum.name, () => {
     it('Test 1', () => {

@@ -1,4 +1,4 @@
-import { findClosestPair } from '../src/findClosestPair';
+import {findClosestPair} from '../src/findClosestPair';
 
 describe(findClosestPair.name, () => {
     it('Test 1', () => {

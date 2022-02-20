@@ -1,4 +1,4 @@
-import { bishopAndPawn } from '../src/bishopAndPawn';
+import {bishopAndPawn} from '../src/bishopAndPawn';
 
 describe(bishopAndPawn.name, () => {
     it('Test 1', () => {

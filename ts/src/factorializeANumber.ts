@@ -1,6 +1,7 @@
 // Return the factorial of the provided integer.
 //
-//     If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
+// If the integer is represented with the letter n,
+// a factorial is the product of all positive integers less than or equal to n.
 //
 //     Factorials are often represented with the shorthand notation n!
 //
@@ -16,8 +17,12 @@
 // factorializeANumber(10) returns 3628800;
 
 export function factorializeANumber(num: number): number {
-
+    //return [...Array(num)].reduce((ac, v, i) => ac * (i + 1), 1);
+    //Alt:
+    let total = 1;
+    for (let i = 2; i <= num; i++) {
+        total *= i;
+    }
+    return total;
 }
 
-// console.log(factorializeANumber(5));
-// console.log(factorializeANumber(10));

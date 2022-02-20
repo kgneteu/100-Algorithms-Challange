@@ -20,7 +20,7 @@ export function characterParity(symbol: string): string {
     let v = parseInt(symbol);
     if (isNaN(v)) {
         return "not a digit";
-    } else if (v % 2 == 0) {
+    } else if (v % 2 === 0) {
         return "even";
     } else {
         return "odd";

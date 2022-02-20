@@ -1,4 +1,4 @@
-import { arrayMaximalAdjacentDifference } from '../src/arrayMaximalAdjacentDifference';
+import {arrayMaximalAdjacentDifference} from '../src/arrayMaximalAdjacentDifference';
 
 describe(arrayMaximalAdjacentDifference.name, () => {
     it('Test 1', () => {

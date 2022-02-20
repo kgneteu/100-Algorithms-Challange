@@ -1,4 +1,4 @@
-import { reflectString } from '../src/reflectString';
+import {reflectString} from '../src/reflectString';
 
 describe(reflectString.name, () => {
     it('Test 1', () => {

@@ -1,4 +1,4 @@
-import { chunkyMonkey } from '../src/chunkyMonkey';
+import {chunkyMonkey} from '../src/chunkyMonkey';
 
 describe(chunkyMonkey.name, () => {
     it('Test 1', () => {

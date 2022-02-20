@@ -46,7 +46,7 @@ export function areSimilar(a: number[], b: number[]): boolean {
     let swapped = false;
     for (let i = 0; i < a.length; i++) {
         if (a[i] !== b[i]) {
-            if (!swapped && (i + 1 < a.length) && a[i + 1] == b[i] && a[i] == b[i + 1]) {
+            if (!swapped && (i + 1 < a.length) && a[i + 1] === b[i] && a[i] === b[i + 1]) {
                 swapped = true;
                 i += 1;
             } else {

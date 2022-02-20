@@ -1,4 +1,4 @@
-import { flattenArray } from '../src/flattenArray';
+import {flattenArray} from '../src/flattenArray';
 
 describe(flattenArray.name, () => {
     it('Test 1', () => {

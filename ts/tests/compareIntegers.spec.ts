@@ -1,4 +1,4 @@
-import { compareIntegers } from '../src/compareIntegers';
+import {compareIntegers} from '../src/compareIntegers';
 
 describe(compareIntegers.name, () => {
     it('Test 1', () => {

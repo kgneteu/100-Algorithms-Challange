@@ -1,4 +1,4 @@
-import { checkPalindrome } from '../src/checkPalindrome';
+import {checkPalindrome} from '../src/checkPalindrome';
 
 describe(checkPalindrome.name, () => {
     it('Test 1', () => {

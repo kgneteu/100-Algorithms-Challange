@@ -1,4 +1,4 @@
-import { fareEstimator } from '../src/fareEstimator';
+import {fareEstimator} from '../src/fareEstimator';
 
 describe(fareEstimator.name, () => {
     it('Test 1', () => {

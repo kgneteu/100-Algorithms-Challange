@@ -22,7 +22,7 @@
 //     [output] array.string
 // Array of the longest strings, stored in the same order as in the inputArray.
 
-export function allLongestStrings(strings:string[]) {
+export function allLongestStrings(strings: string[]) {
     let maxLength = 0;
     for (let s of strings) {
         if (s.length > maxLength) maxLength = s.length;

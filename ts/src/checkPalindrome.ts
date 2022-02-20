@@ -29,5 +29,5 @@
 export function checkPalindrome(inputString: string): boolean {
     let s1 = inputString.toLowerCase();
     let s2 = s1.split("").reverse().join("");
-    return s1 == s2;
+    return s1 === s2;
 }

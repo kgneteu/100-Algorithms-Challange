@@ -1,4 +1,4 @@
-import { arrayPreviousLess } from '../src/arrayPreviousLess';
+import {arrayPreviousLess} from '../src/arrayPreviousLess';
 
 describe(arrayPreviousLess.name, () => {
     it('Test 1', () => {

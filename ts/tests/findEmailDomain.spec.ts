@@ -1,4 +1,4 @@
-import { findEmailDomain } from '../src/findEmailDomain';
+import {findEmailDomain} from '../src/findEmailDomain';
 
 describe(findEmailDomain.name, () => {
     it('Test 1', () => {

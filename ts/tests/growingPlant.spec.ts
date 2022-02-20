@@ -1,4 +1,4 @@
-import { growingPlant } from '../src/growingPlant';
+import {growingPlant} from '../src/growingPlant';
 
 describe(growingPlant.name, () => {
     it('Test 1', () => {

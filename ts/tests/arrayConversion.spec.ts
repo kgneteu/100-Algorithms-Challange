@@ -1,4 +1,4 @@
-import { arrayConversion } from '../src/arrayConversion';
+import {arrayConversion} from '../src/arrayConversion';
 
 describe(arrayConversion.name, () => {
     it('Test 1', () => {

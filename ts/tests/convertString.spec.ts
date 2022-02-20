@@ -1,4 +1,4 @@
-import { convertString } from '../src/convertString';
+import {convertString} from '../src/convertString';
 
 describe(convertString.name, () => {
     it('Test 1', () => {

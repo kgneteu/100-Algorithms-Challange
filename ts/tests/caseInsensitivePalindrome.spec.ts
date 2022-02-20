@@ -1,4 +1,4 @@
-import { isCaseInsensitivePalindrome } from '../src/caseInsensitivePalindrome';
+import {isCaseInsensitivePalindrome} from '../src/caseInsensitivePalindrome';
 
 describe(isCaseInsensitivePalindrome.name, () => {
     it('Test 1', () => {

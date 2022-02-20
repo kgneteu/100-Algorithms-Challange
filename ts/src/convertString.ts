@@ -36,7 +36,7 @@ export function convertString(s: string, t: string): boolean {
     let word = "";
     let index = 0;
     for (let c of s) {
-        if (c == t[index]) {
+        if (c === t[index]) {
             word = word.concat(c)
             if (word === t) return true;
             index++;
@@ -49,7 +49,7 @@ export function convertString(s: string, t: string): boolean {
     //     let found = false
     //     for (let k = index; k < s.length; k++) {
     //         index++;
-    //         if (c == s[k]) {
+    //         if (c === s[k]) {
     //             found = true;
     //             break;
     //         }

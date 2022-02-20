@@ -34,7 +34,7 @@ export function bishopAndPawn(bishop: string, pawn: string): boolean {
     let pY = parseInt(pawn[1]);
 
     //return Math.abs(bX - pX) === Math.abs(bY - pY);
-    return bX + pY === bY + pX ||  bX + bY === pX + pY;
+    return bX + pY === bY + pX || bX + bY === pX + pY;
 }
 
 // console.log(bishopAndPawn('a1', 'c3'));

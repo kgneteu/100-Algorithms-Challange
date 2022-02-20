@@ -1,4 +1,4 @@
-import { commonCharacterCount } from '../src/commonCharacterCount';
+import {commonCharacterCount} from '../src/commonCharacterCount';
 
 describe(commonCharacterCount.name, () => {
     it('Test 1', () => {

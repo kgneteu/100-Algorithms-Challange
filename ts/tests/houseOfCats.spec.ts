@@ -1,4 +1,4 @@
-import { houseOfCats } from '../src/houseOfCats';
+import {houseOfCats} from '../src/houseOfCats';
 
 describe(houseOfCats.name, () => {
     it('Test 1', () => {

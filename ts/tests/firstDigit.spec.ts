@@ -1,4 +1,4 @@
-import { firstDigit } from '../src/firstDigit';
+import {firstDigit} from '../src/firstDigit';
 
 describe(firstDigit.name, () => {
     it('Test 1', () => {

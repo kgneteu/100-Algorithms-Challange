@@ -1,4 +1,4 @@
-import { companyBotStrategy } from '../src/companyBotStrategy';
+import {companyBotStrategy} from '../src/companyBotStrategy';
 
 describe(companyBotStrategy.name, () => {
     it('Test 1', () => {

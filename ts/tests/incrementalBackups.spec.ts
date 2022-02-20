@@ -1,4 +1,4 @@
-import { incrementalBackups } from '../src/incrementalBackups';
+import {incrementalBackups} from '../src/incrementalBackups';
 
 describe(incrementalBackups.name, () => {
     it('Test 1', () => {

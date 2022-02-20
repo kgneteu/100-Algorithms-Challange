@@ -1,4 +1,4 @@
-import { electionsWinners } from '../src/electionWinners';
+import {electionsWinners} from '../src/electionWinners';
 
 describe(electionsWinners.name, () => {
     it('Test 1', () => {

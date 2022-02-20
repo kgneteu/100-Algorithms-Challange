@@ -1,4 +1,4 @@
-import { factorializeANumber } from '../src/factorializeANumber';
+import {factorializeANumber} from '../src/factorializeANumber';
 
 describe(factorializeANumber.name, () => {
     it('Test 1', () => {

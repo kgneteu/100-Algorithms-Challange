@@ -1,4 +1,4 @@
-import { extractEachKth } from '../src/extractEachKth';
+import {extractEachKth} from '../src/extractEachKth';
 
 describe(extractEachKth.name, () => {
     it('Test 1', () => {

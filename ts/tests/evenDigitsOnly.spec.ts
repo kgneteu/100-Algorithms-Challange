@@ -1,4 +1,4 @@
-import { evenDigitsOnly } from '../src/evenDigitsOnly';
+import {evenDigitsOnly} from '../src/evenDigitsOnly';
 
 describe(evenDigitsOnly.name, () => {
     it('Test 1', () => {

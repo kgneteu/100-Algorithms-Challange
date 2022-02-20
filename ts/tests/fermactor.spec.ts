@@ -1,4 +1,4 @@
-import { fermactor } from '../src/fermactor';
+import {fermactor} from '../src/fermactor';
 
 describe(fermactor.name, () => {
     it('Test 1', () => {

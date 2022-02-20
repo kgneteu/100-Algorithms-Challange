@@ -1,4 +1,4 @@
-import { arrayChange } from '../src/arrayChange';
+import {arrayChange} from '../src/arrayChange';
 
 describe(arrayChange.name, () => {
     it('Test 1', () => {

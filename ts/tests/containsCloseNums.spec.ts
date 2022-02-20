@@ -1,4 +1,4 @@
-import { containsCloseNums } from '../src/containsCloseNums';
+import {containsCloseNums} from '../src/containsCloseNums';
 
 describe(containsCloseNums.name, () => {
     it('Test 1', () => {

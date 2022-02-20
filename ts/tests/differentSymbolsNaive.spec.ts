@@ -1,4 +1,4 @@
-import { differentSymbolsNaive } from '../src/differentSymbolsNaive';
+import {differentSymbolsNaive} from '../src/differentSymbolsNaive';
 
 describe(differentSymbolsNaive.name, () => {
     it('Test 1', () => {

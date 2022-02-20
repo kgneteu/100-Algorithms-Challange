@@ -1,14 +1,17 @@
-// You are implementing your own HTML editor. To make it more comfortable for developers you would like to add an auto-completion feature to it.
+// You are implementing your own HTML editor. To make it more comfortable for developers
+// you would like to add an auto-completion feature to it.
 //
-//     Given the starting HTML tag, find the appropriate end tag which your editor should propose.
+// Given the starting HTML tag, find the appropriate end tag which your editor should propose.
 //
-//     If you are not familiar with HTML, consult with this note.
+// If you are not familiar with HTML, consult with this note.
 //
-//     Example
+// Example
 //
-// For startTag = "", the output should be htmlEndTagByStartTag(startTag) = "";
+// For startTag = "<button type='button' disabled>", the output should be
+// htmlEndTagByStartTag(startTag) = "</button>";
 //
-// For startTag = "", the output should be htmlEndTagByStartTag(startTag) = "".
+// For startTag = "<i>", the output should be
+// htmlEndTagByStartTag(startTag) = "</i>".
 //
 //     Hints
 //
@@ -29,8 +32,6 @@
 //     [output] string
 
 export function htmlEndTagByStartTag(startTag: string): string {
-
+    const tag = startTag.split(/[\s\>]+/)[0].slice(1);
+    return `</${tag}>`;
 }
-
-// console.log(htmlEndTagByStartTag("<button type='button' disabled>"));
-// console.log(htmlEndTagByStartTag('<i>'));

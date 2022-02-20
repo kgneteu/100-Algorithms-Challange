@@ -1,4 +1,4 @@
-import { isTandemRepeat } from '../src/isTandemRepeat';
+import {isTandemRepeat} from '../src/isTandemRepeat';
 
 describe(isTandemRepeat.name, () => {
     it('Test 1', () => {

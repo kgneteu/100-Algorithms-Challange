@@ -1,4 +1,4 @@
-import { fancyRide } from '../src/fancyRide';
+import {fancyRide} from '../src/fancyRide';
 
 describe(fancyRide.name, () => {
     it('Test 1', () => {

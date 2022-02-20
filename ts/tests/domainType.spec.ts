@@ -1,4 +1,4 @@
-import { domainType } from '../src/domainType';
+import {domainType} from '../src/domainType';
 
 describe(domainType.name, () => {
     it('Test 1', () => {

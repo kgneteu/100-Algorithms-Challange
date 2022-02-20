@@ -1,4 +1,4 @@
-import { extractMatrixColumn } from '../src/extractMatrixColumn';
+import {extractMatrixColumn} from '../src/extractMatrixColumn';
 
 describe(extractMatrixColumn.name, () => {
     it('Test 1', () => {

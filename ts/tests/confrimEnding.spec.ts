@@ -1,4 +1,4 @@
-import { confirmEnding } from '../src/confirmEnding';
+import {confirmEnding} from '../src/confirmEnding';
 
 describe(confirmEnding.name, () => {
     it('Test 1', () => {

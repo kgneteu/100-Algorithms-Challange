@@ -1,4 +1,4 @@
-import { celsiusToFahrenheit } from '../src/convertCelsiusToFahrenheit';
+import {celsiusToFahrenheit} from '../src/convertCelsiusToFahrenheit';
 
 describe(celsiusToFahrenheit.name, () => {
     it('Test 1', () => {

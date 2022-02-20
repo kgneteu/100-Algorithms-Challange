@@ -1,4 +1,4 @@
-import { avoidObstacles } from '../src/avoidObstacles';
+import {avoidObstacles} from '../src/avoidObstacles';
 
 describe(avoidObstacles.name, () => {
     it('Test 1', () => {

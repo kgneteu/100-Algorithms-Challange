@@ -22,7 +22,7 @@
 // true if all digits of n are even, false otherwise.
 //
 export function evenDigitsOnly(n: number): boolean {
-
+    return n.toString().split("").every(v => parseInt(v) % 2 === 0)
 }
 
 // console.log(evenDigitsOnly(248622));

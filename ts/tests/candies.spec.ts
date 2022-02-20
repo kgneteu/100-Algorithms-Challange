@@ -1,4 +1,4 @@
-import { candies } from '../src/candies';
+import {candies} from '../src/candies';
 
 describe(candies.name, () => {
     it('Test 1', () => {

@@ -1,4 +1,4 @@
-import { arrayReplace } from '../src/arrayReplace';
+import {arrayReplace} from '../src/arrayReplace';
 
 describe(arrayReplace.name, () => {
     it('Test 1', () => {

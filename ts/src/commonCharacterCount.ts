@@ -31,7 +31,7 @@
 //     [output] integer
 
 export function commonCharacterCount(s1: string, s2: string): number {
- return 0;
+    return 0;
 }
 
 

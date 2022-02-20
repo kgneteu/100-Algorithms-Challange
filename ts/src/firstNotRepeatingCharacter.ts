@@ -1,34 +1,44 @@
-// Note: Write a solution that only iterates over the string once and uses O(1) additional memory, since this is what you would be asked to do during a real interview.
+// Note: Write a solution that only iterates over the string once and uses
+// O(1) additional memory, since this is what you would be asked
+// to do during a real interview.
 //
-//     Given a string s, find and return the first instance of a non-repeating character in it. If there is no such character, return '_'.
+// Given a string s, find and return the first instance of a non-repeating character
+// in it. If there is no such character, return '_'.
 //
-//     Example
+// Example
 //
-// For s = "abacabad", the output should be firstNotRepeatingCharacter(s) = 'c'.
-//     There are 2 non-repeating characters in the string: 'c' and 'd'. Return c since it appears in the string first.
+// For s = "abacabad", the output should be
+// firstNotRepeatingCharacter(s) = 'c'.
 //
-//     For s = "abacabaabacaba", the output should be firstNotRepeatingCharacter(s) = '_'.
-//     There are no characters in this string that do not repeat.
+// There are 2 non-repeating characters in the string: 'c' and 'd'. Return c since it appears in the string first.
 //
-//     Hints
+// For s = "abacabaabacaba", the output should be firstNotRepeatingCharacter(s) = '_'.
+// There are no characters in this string that do not repeat.
+//
+//  Hints
 //
 // split()
 // hasOwnProperty()
 // Input/Output
 //
-//     [execution time limit] 5 seconds (ts)
+//  [execution time limit] 5 seconds (ts)
 //
-//     [input] string s A string that contains only lowercase English letters.
+//  [input] string s A string that contains only lowercase English letters.
 //
-//     Guaranteed constraints:
+//  Guaranteed constraints:
 //
-//     1 ≤ s.length ≤ 10^5.
+//  1 ≤ s.length ≤ 10^5.
 //
-//     [output] char The first non-repeating character in s, or '_' if there are no characters that do not repeat.
-//
-export function firstNotRepeatingCharacter(s: string): string {
+//  [output] char The first non-repeating character in s, or '_' if there are no
+//  characters that do not repeat.
 
+export function firstNotRepeatingCharacter(s: string): string {
+    const chars: { [index: string]: number } = {}
+    for (let c of s) {
+        chars.hasOwnProperty(c) ? chars[c] += 1 : chars[c] = 1;
+    }
+    return Object.entries(chars).toString();
 }
 
-// console.log(firstNotRepeatingCharacter('abacabad'));
-// console.log(firstNotRepeatingCharacter('abacabaabacaba'));
+console.log(firstNotRepeatingCharacter('abacabad'));
+console.log(firstNotRepeatingCharacter('abacabaabacaba'));

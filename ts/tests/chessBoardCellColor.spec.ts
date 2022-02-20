@@ -1,4 +1,4 @@
-import { chessBoardCellColor } from '../src/chessBoardCellColor';
+import {chessBoardCellColor} from '../src/chessBoardCellColor';
 
 describe(chessBoardCellColor.name, () => {
     it('Test 1', () => {

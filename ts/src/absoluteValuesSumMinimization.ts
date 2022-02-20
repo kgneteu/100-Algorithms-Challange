@@ -33,7 +33,7 @@
 //     [output] integer
 
 export function absoluteValuesSumMinimization(a: number[]): number {
-    return a[Math.floor((a.length-1) / 2)]
+    return a[Math.floor((a.length - 1) / 2)]
 }
 
 

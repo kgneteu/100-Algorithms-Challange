@@ -1,4 +1,6 @@
-// Ticket numbers usually consist of an even number of digits. A ticket number is considered lucky if the sum of the first half of the digits is equal to the sum of the second half.
+// Ticket numbers usually consist of an even number of digits.
+// A ticket number is considered lucky if the sum of the first half
+// of the digits is equal to the sum of the second half.
 //
 //     Given a ticket number n, determine if it's lucky or not.
 //
@@ -27,8 +29,8 @@
 //
 // true if n is a lucky ticket number, false otherwise.
 export function isLucky(n: number): boolean {
-
+    let ticketNo = n.toString();
+    let sum1 = ticketNo.substring(0, ticketNo.length / 2).split("").map(a => +a).reduce((ac, v) => ac + v);
+    let sum2 = ticketNo.substring(ticketNo.length / 2).split("").map(a => +a).reduce((ac, v) => ac + v);
+    return sum1 === sum2;
 }
-
-// console.log(isLucky(1230));
-// console.log(isLucky(239017));

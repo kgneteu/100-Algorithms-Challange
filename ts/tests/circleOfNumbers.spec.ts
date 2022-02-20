@@ -1,4 +1,4 @@
-import { circleOfNumbers } from '../src/circleOfNumbers';
+import {circleOfNumbers} from '../src/circleOfNumbers';
 
 describe(circleOfNumbers.name, () => {
     it('Test 1', () => {

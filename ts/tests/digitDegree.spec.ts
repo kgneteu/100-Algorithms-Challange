@@ -1,4 +1,4 @@
-import { digitDegree } from '../src/digitDegree';
+import {digitDegree} from '../src/digitDegree';
 
 describe(digitDegree.name, () => {
     it('Test 1', () => {

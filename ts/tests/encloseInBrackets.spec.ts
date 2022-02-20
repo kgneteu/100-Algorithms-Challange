@@ -1,4 +1,4 @@
-import { encloseInBrackets } from '../src/encloseInBrackets';
+import {encloseInBrackets} from '../src/encloseInBrackets';
 
 describe(encloseInBrackets.name, () => {
     it('Test 1', () => {

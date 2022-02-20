@@ -1,4 +1,4 @@
-import { firstNotRepeatingCharacter } from '../src/firstNotRepeatingCharacter';
+import {firstNotRepeatingCharacter} from '../src/firstNotRepeatingCharacter';
 
 describe(firstNotRepeatingCharacter.name, () => {
     it('Test 1', () => {

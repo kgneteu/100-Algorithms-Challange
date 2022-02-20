@@ -1,4 +1,4 @@
-import { characterParity } from '../src/characterParity';
+import {characterParity} from '../src/characterParity';
 
 describe(characterParity.name, () => {
     it('Test 1', () => {

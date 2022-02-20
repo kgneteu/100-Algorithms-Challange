@@ -1,4 +1,4 @@
-import { depositProfit } from '../src/depositProfit';
+import {depositProfit} from '../src/depositProfit';
 
 describe(depositProfit.name, () => {
     it('Test 1', () => {

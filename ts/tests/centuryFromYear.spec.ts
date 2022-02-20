@@ -1,4 +1,4 @@
-import { centuryFromYear } from '../src/centuryFromYear';
+import {centuryFromYear} from '../src/centuryFromYear';
 
 describe(centuryFromYear.name, () => {
     it('Test 1', () => {

@@ -1,4 +1,4 @@
-import { containsDuplicates } from '../src/containsDuplicates';
+import {containsDuplicates} from '../src/containsDuplicates';
 
 describe(containsDuplicates.name, () => {
     it('Test 1', () => {

@@ -36,7 +36,7 @@ export function arrayPreviousLess(items: number[]): number[] {
             if (items[k] < items[i]) {
                 out.unshift(items[k]);
                 break;
-            } else if (k == 0) {
+            } else if (k === 0) {
                 out.unshift(-1)
             }
         }
