@@ -28,8 +28,19 @@
 //     [output] array.integer
 //
 // Sorted array a with all the trees untouched.
+
 export function sortByHeight(a: number[]): number[] {
-    return a.sort((a, b) => (a === -1) ? 0 : a - b)
+    const filteredArray = a.filter(v => v !== -1).sort((a, b) => a - b);
+    const sortedArray = [];
+    let index = 0;
+    for (let n of a) {
+        if (n == -1) {
+            sortedArray.push(n)
+        } else {
+            sortedArray.push(filteredArray[index++])
+        }
+    }
+    return sortedArray;
 }
 
 // console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));

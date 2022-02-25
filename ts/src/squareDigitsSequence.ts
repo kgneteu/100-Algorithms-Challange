@@ -1,8 +1,10 @@
-// Consider a sequence of numbers a0, a1, ..., an, in which an element is equal to the sum of squared digits of the previous element. The sequence ends once an element that has already been in the sequence appears again.
+// Consider a sequence of numbers a0, a1, ..., an, in which an element
+// is equal to the sum of squared digits of the previous element.
+// The sequence ends once an element that has already been in the sequence appears again.
 //
-//     Given the first element a0, find the length of the sequence.
+// Given the first element a0, find the length of the sequence.
 //
-//     Example
+// Example
 //
 // For a0 = 16, the output should be squareDigitsSequence(a0) = 9.
 //
@@ -19,10 +21,10 @@
 // a8 = 4^2 = 1^6, which has already occurred before (a0)
 // Thus, there are 9 elements in the sequence.
 //
-//     For a0 = 103, the output should be squareDigitsSequence(a0) = 4.
+// For a0 = 103, the output should be squareDigitsSequence(a0) = 4.
 // The sequence goes as follows: 103 -> 10 -> 1 -> 1, 4 elements altogether.
 //
-//     Hints
+// Hints
 //
 // includes()
 // push()
@@ -48,5 +50,5 @@ export function squareDigitsSequence(a0: number): number {
 }
 
 
-// console.log(squareDigitsSequence(16));
-// console.log(squareDigitsSequence(103));
+console.log(squareDigitsSequence(16));
+console.log(squareDigitsSequence(103));

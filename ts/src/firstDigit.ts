@@ -33,6 +33,8 @@ export function firstDigit(inputString: string): string {
             return c;
         }
     }
+    //todo
+    // return s.match(/\d/)[0]
 }
 
 

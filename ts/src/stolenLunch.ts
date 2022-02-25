@@ -10,7 +10,8 @@
 // The note is different every day, so you decide to write a function that will decipher it
 // for your nephew on an ongoing basis.
 //
-// Example For note = "you'll n4v4r 6u4ss 8t: cdja", the output should be stolenLunch(note) = "you'll never guess it: 2390".
+// Example For note = "you'll n4v4r 6u4ss 8t: cdja", the output should be
+// stolenLunch(note) = "you'll never guess it: 2390".
 //
 // Hints
 //
@@ -29,7 +30,14 @@
 // [output] string The deciphered note.
 
 export function stolenLunch(note: string): string {
+    const encrypted = "abcdefghij0123456789";
+    const decrypted = "0123456789abcdefghij";
 
+    const cipher = note.split("");
+    for (let i in cipher) {
+        const index = encrypted.indexOf(cipher[i]);
+        if (index !==-1) cipher[i] = decrypted[index];
+    }
+    return cipher.join("")
 }
 
-// console.log(stolenLunch("you'll n4v4r 6u4ss 8t: cdja"));

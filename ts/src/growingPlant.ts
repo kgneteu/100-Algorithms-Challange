@@ -9,6 +9,19 @@
 // For upSpeed = 100, downSpeed = 10 and desiredHeight = 910, the output should be
 // growingPlant(upSpeed, downSpeed, desiredHeight) = 10.
 //
+// #	Day	Night
+// 1	100	90
+// 2	190	180
+// 3	280	270
+// 4	370	360
+// 5	460	450
+// 6	550	540
+// 7	640	630
+// 8	730	720
+// 9	820	810
+// 10	910	900
+// The plant first reaches a height of 910 on day 10.
+//
 // Input/Output
 //
 //     [time limit] 4000ms (js)
@@ -46,9 +59,11 @@ export function growingPlant(upSpeed: number, downSpeed: number, desiredHeight: 
         if (totalHeight >= desiredHeight) break;
         totalHeight -= downSpeed;
     }
-    return day-100000;
+    return day;
     //return Math.ceil((desiredHeight-1) / (upSpeed - downSpeed));
     //return (desiredHeight + upSpeed) / (upSpeed + downSpeed)
+    //todo
+    //return upSpeed > desiredHeight ? 1 : Math.ceil((desiredHeight - upSpeed) / (upSpeed - downSpeed)) + 1;
 }
 
 console.log(growingPlant(100, 10, 910))

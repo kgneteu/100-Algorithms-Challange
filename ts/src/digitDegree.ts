@@ -28,9 +28,19 @@
 //     [output] integer
 
 export function digitDegree(n: number): number {
-
+    let degree = 0;
+    let digits = n.toString().split("");
+    while (digits.length > 1) {
+        let total = digits.reduce((a: number, b: string) => a + +b, 0);
+        digits = total.toString().split("");
+        degree++;
+    }
+    return degree;
 }
-
-// console.log(digitDegree(5));
-// console.log(digitDegree(10));
-// console.log(digitDegree(91));
+//todo
+// function solution(n) {
+//     c = 0
+//     while (n.toString().length>1) {
+//         n = n.toString().split("").reduce((x,y)=>Number(x)+Number(y))
+//         c++}
+//     return c}

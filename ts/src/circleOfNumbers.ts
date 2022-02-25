@@ -33,6 +33,11 @@
 
 export function circleOfNumbers(n: number, firstNumber: number): number {
     return firstNumber < n / 2 ? n / 2 + firstNumber : firstNumber - n / 2;
+
+    //todo
+    // return (n/2+firstNumber)%n
+    //return (firstNumber+n/2)%n;
+
     //alt with push
     // let arr = []
     // for (let i = 0; i < n; i++) {

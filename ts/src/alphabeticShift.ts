@@ -23,13 +23,19 @@
 // The result string after replacing all of its characters.
 
 export function alphabeticShift(s: string): string {
-    let out: string = '';
+    let result: string = '';
     for (let c of s) {
         if (c === 'z') {
-            out += 'a';
+            result += 'a';
         } else {
-            out += String.fromCharCode((c.charCodeAt(0) + 1));
+            result += String.fromCharCode((c.charCodeAt(0) + 1));
         }
     }
-    return out;
+    return result;
+    // todo
+    // var c="abcdefghijklmnopqrstuvwxyza"
+    // return s.replace(/./g,x=>c[c.indexOf(x)+1])
+
+    //B = Buffer
+    // solution = s => B([...B(s)].map(e=>(e-96)%26+97))+""
 }

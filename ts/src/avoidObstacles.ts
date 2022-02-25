@@ -39,5 +39,8 @@ export function avoidObstacles(inputArray: number[]): number {
         }
     }
     return minLength;
+
+    //todo refactor
+    //for (let n = 1; ; n++) if (inputArray.every(x => x % n)) return n
 }
 

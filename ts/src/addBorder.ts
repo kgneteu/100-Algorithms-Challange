@@ -8,7 +8,8 @@
 //     "ded"]
 // the output should be
 //
-// addBorder(picture) = ["*****",
+// addBorder(picture) =
+//    ["*****",
 //     "*abc*",
 //     "*ded*",
 //     "*****"]

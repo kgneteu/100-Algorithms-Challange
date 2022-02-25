@@ -25,13 +25,19 @@
 export function longestDigitsPrefix(inputString: string): string {
     let result = [];
     for (let c of inputString.split("")) {
-        if (isNaN(+c)) {
+        if (isNaN(parseInt(c))) {
             break;
         }
         result.push(c);
     }
     return result.join("");
+
+    //todo
+    //return inputString.match(/^\d*/)[0]
+
+    //Number vs ParseInt
 }
 
 
-// console.log(longestDigitsPrefix('123aa1'));
+console.log(longestDigitsPrefix(  '  3) always check for whitespaces'));
+console.log(longestDigitsPrefix(  '0123456789'));

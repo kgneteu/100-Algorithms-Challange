@@ -1,4 +1,10 @@
-// Ratiorg got statues of different sizes as a present from CodeMaster for his birthday, each statue having an non-negative integer size. Since he likes to make things perfect, he wants to arrange them from smallest to largest so that each statue will be bigger than the previous one exactly by 1. He may need some additional statues to be able to accomplish that. Help him figure out the minimum number of additional statues needed.
+// Ratiorg got statues of different sizes as a present from CodeMaster
+// for his birthday, each statue having an non-negative integer size.
+// Since he likes to make things perfect, he wants to arrange them from
+// smallest to largest so that each statue will be bigger than the previous
+// one exactly by 1.
+// He may need some additional statues to be able to accomplish that.
+// Help him figure out the minimum number of additional statues needed.
 //
 //     Example
 //
@@ -12,8 +18,8 @@
 // indexOf()
 // Input/Output
 //
-//     [time limit] 4000ms (js)
-//     [input] array.integer statues
+// [time limit] 4000ms (js)
+// [input] array.integer statues
 // An array of distinct non-negative integers.
 //
 //     Guaranteed constraints:
@@ -23,9 +29,13 @@
 //     0 ≤ statues[i] ≤ 20.
 //
 //     [output] integer
-// The minimal number of statues that need to be added to existing statues such that it contains every integer size from an interval [L, R] (for some L, R) and no other sizes.
-export function makeArrayConsecutive2(statues: number[]): number {
+// The minimal number of statues that need to be added to existing statues
+// such that it contains every integer size from an interval [L, R] (for some L, R)
+// and no other sizes.
 
+export function makeArrayConsecutive2(statues: number[]): number {
+    const sortedStatuses = [...statues].sort((a, b) => a - b);
+    return sortedStatuses[sortedStatuses.length - 1] - sortedStatuses[0] - sortedStatuses.length + 1;
 }
 
-// console.log(makeArrayConsecutive2([6, 2, 3, 8]));
+console.log(makeArrayConsecutive2([6, 2, 3, 8]));

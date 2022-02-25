@@ -25,16 +25,16 @@
 //
 // Return true if it is possible to remove one element from the array in order to get a strictly increasing sequence, otherwise return false.
 
-export function almostIncreasingSequence(data) {
+export function almostIncreasingSequence(sequence) {
+    const length = sequence.length;
     let stops = 0;
-    for (let i = 1; i < data.length; i++) {
-        if (data[i] <= data[i - 1]) {
+    for (let i = 1; i < length; i++) {
+        if (sequence[i] <= sequence[i - 1]) {
             stops++;
-            if (stops > 1) return false
-            if ((i + 1 < data.length) && (data[i + 1] <= data[i - 1])) {
-                return false
+            if (i > 1 && i < length - 1 && sequence[i] <= sequence[i - 2] && sequence[i + 1] <= sequence[i - 1]) {
+                return false;
             }
         }
     }
-    return true
+    return stops <= 1;
 }

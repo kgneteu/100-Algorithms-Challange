@@ -22,13 +22,24 @@
 // true if both cells have the same color, false otherwise.
 
 export function chessBoardCellColor(cell1: string, cell2: string): boolean {
-    let c1Col = parseInt(cell1[0], 16) - 0xa + 1;
-    let c1Row = parseInt(cell1[1]) * 8 - 8;
-    let c2Col = parseInt(cell1[0], 16) - 0xa + 1;
-    let c2Row = parseInt(cell1[1]) * 8 - 8;
 
-    let c1Odd = (c1Col * 8 + c1Row) % 2 !== 0;
-    let c2Odd = (c2Col * 8 + c2Row) % 2 !== 0;
-    return ((!c1Odd && !c2Odd) || (c1Odd && c2Odd))
+    let c1Y = cell1.charCodeAt(0) - "A".charCodeAt(0);
+    let c1X = parseInt(cell1[1]);
+    let c2Y = cell2.charCodeAt(0) - "A".charCodeAt(0);
+    let c2X = parseInt(cell2[1]);
+
+    if (Math.abs(c1Y - c2Y) % 2 !== 0) {
+        return Math.abs(c1X - c2X) % 2 !== 0
+    } else {
+        return Math.abs(c1X - c2X) % 2 === 0
+    }
+    //todo
+    // var color = s => (Buffer(s)[0] - s[1])%2
+    //
+    // var solution = (a,b) => color(a) == color(b)
+
+    // return (cell1.charCodeAt(0)+Number(cell1[1])+cell2.charCodeAt(0)+Number(cell2[1]))%2==0}
 }
 
+console.log(chessBoardCellColor("A1", "C3"))
+console.log(chessBoardCellColor("A1", "H3"))

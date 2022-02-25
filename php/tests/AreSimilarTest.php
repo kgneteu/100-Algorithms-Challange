@@ -32,4 +32,22 @@ final class AreSimilarTest extends TestCase
         $expected = false;
         $this->assertEquals($expected, $actual);
     }
+
+    public function testAreSimilar4()
+    {
+        $data1 = [2, 3, 1];
+        $data2 = [1, 3, 2];
+        $actual = are_similar($data1, $data2);
+        $expected = true;
+        $this->assertEquals($expected, $actual);
+    }
+
+    public function testAreSimilar5()
+    {
+        $data1 = [832, 998, 148, 570, 533, 561, 894, 147, 455, 279];
+        $data2 = [832, 998, 148, 570, 533, 561, 455, 147, 894, 279];
+        $actual = are_similar($data1, $data2);
+        $expected = true;
+        $this->assertEquals($expected, $actual);
+    }
 }

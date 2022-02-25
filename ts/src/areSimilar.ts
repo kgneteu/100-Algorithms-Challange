@@ -43,16 +43,58 @@
 // true if a and b are similar, false otherwise.
 
 export function areSimilar(a: number[], b: number[]): boolean {
-    let swapped = false;
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] !== b[i]) {
-            if (!swapped && (i + 1 < a.length) && a[i + 1] === b[i] && a[i] === b[i + 1]) {
-                swapped = true;
-                i += 1;
-            } else {
-                return false
-            }
-        }
-    }
-    return true;
+    // let swapped = false;
+    // for (let i = 0; i < a.length; i++) {
+    //     if (a[i] !== b[i]) {
+    //         console.log(i + 1, a.length)
+    //         if (!swapped) {
+    //             swapped = true;
+    //             const bIndex = b.indexOf(a[i], i)
+    //             if (bIndex != -1) {
+    //                 if (a[bIndex] === b[i]){
+    //                     b[i] =a[i]
+    //                     b[bIndex] =a[bIndex];
+    //                     i += 1;
+    //                 } else {
+    //                     return false;
+    //                 }
+    //             } else {
+    //                 return false
+    //             }
+    //         } else {
+    //             return false
+    //         }
+    //     }
+    // }
+    // return true;
+
+    // const c: number[] = [];
+    // let d: number[] = [];
+    // if (a.toString() === b.toString()) {
+    //     return true;
+    // }
+    //
+    // for (let i = 0; i < a.length; i++) {
+    //     if (a[i] !== b[i]) {
+    //         c.push(a[i]);
+    //         d.push(b[i]);
+    //     }
+    // }
+    // d = d.reverse();
+    // if (c.length === 2 && (c.toString() === d.toString())) {
+    //     return true;
+    // }
+    // return false;
+
+    //todo refactor also in other lang
+    const ad = a.filter((v, i) => v != b[i])
+    const bd = b.filter((v, i) => v != a[i])
+    return ad.length == 0 || (ad.length == 2 && ad.join('') == bd.reverse().join(''))
+
+    // for(var r=[],i=0;i<A.length;i++) if(A[i]!=B[i]) r.push(A[i],B[i])
+    // return r.length<5&&new Set(r).size<3
 }
+
+console.log(areSimilar(
+    [832, 998, 148, 570, 533, 561, 894, 147, 455, 279],
+    [832, 998, 148, 570, 533, 561, 455, 147, 894, 279]))

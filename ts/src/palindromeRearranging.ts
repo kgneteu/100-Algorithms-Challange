@@ -1,6 +1,6 @@
 // Given a string, find out if its characters can be rearranged to form a palindrome.
 //
-//     Example
+// Example
 //
 // For inputString = "aabb", the output should be palindromeRearranging(inputString) = true.
 //
@@ -22,10 +22,26 @@
 // 1 ≤ inputString.length ≤ 50.
 //
 // [output] boolean
-// true if the characters of the inputString can be rearranged to form a palindrome, false otherwise.
+// true if the characters of the inputString can be rearranged to form
+// a palindrome, false otherwise.
 
 export function palindromeRearranging(inputString: string): boolean {
+    const stat: { [index: string]: number } = {};
+    for (let c of inputString) {
+        stat.hasOwnProperty(c) ? stat[c]++ : stat[c] = 1;
+    }
+    let odds = 0;
+    for (let c in stat) {
+        if (stat[c] % 2 !== 0) {
+            odds++;
+            if (odds > 1) return false;
+            if (inputString.length % 2 == 0) return false;
+        }
+    }
+    return true
+    //return inputString.split('').sort().join('').replace(/(\w)\1/g,'').length < 2;
 
 }
 
-// console.log(palindromeRearranging('aabb'));
+// console.log(palindromeRearranging('aaabb'));
+// console.log(palindromeRearranging('aabbccccdee'));
