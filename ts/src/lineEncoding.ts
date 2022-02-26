@@ -44,7 +44,7 @@ export function lineEncoding(s: string): string {
     }
     return result
 }
-
+//todo check regex
 // s.replace(
 //     /(.)\1*/g,
 //     (e,i) => i==e ? i : e.length+i
