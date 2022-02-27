@@ -1,6 +1,5 @@
 import {longestWord} from "../src/longestWord";
 
-
 describe(longestWord.name, () => {
     it('Test 1', () => {
         const data = "Ready, steady, go!";
