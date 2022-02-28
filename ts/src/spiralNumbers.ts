@@ -32,6 +32,7 @@
 // j += dj
 // return A
 
+//todo check & improve
 export function spiralNumbers(n: number): number[][] {
     let result: number[][] = new Array(n).fill(0)
          .map(() => new Array(n).fill(0));

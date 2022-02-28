@@ -1,3 +1,4 @@
+//
 // Your friend advised you to see a new performance in the most popular theater in the city.
 // He knows a lot about art and his advice is usually good,
 // but not this time: the performance turned out to be awfully dull.
@@ -22,6 +23,17 @@
 // seatsInTheater(nCols, nRows, col, row) = 96.
 //
 // Here is what the theater looks like:
+// xxxxXXXXXXXXXXXX
+// xxxxXXXXXXXXXXXX
+// xxxxXXXXXXXXXXXX
+// xxxxXXXXXXXXXXXX
+// xxxxXXXXXXXXXXXX
+// xxxxXXXXXXXXXXXX
+// xxxxXXXXXXXXXXXX
+// xxxxXXXXXXXXXXXX
+// xxxxOXXXXXXXXXXX  ->EXIT
+// xxxxXXXXXXXXXXXX
+// xxxxXXXXXXXXXXXX
 //
 // Input/Output
 //
@@ -49,8 +61,9 @@
 //
 //     [output] integer
 // The number of people who sit strictly behind you and in your column or to the left.
-export function seatsInTheater(nCols: number, nRows: number, col: number, row: number): number {
 
+export function seatsInTheater(nCols: number, nRows: number, col: number, row: number): number {
+    return (nRows - row) * (nCols - col + 1)
 }
 
-console.log(seatsInTheater(16, 11, 5, 3));
+//console.log(seatsInTheater(13, 6, 8, 3));

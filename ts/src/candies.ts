@@ -28,4 +28,5 @@
 
 export function candies(n: number, m: number): number {
     return Math.floor(m / n) * n;
+    //return m - m % n;
 }
