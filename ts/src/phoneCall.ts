@@ -48,19 +48,22 @@
 export function phoneCall(min1: number, min2_10: number, min11: number, s: number): number {
     let left = s;
     let time = 0;
-    if (s > min1) {
+    if (s >= min1) {
         left -= min1;
         time = 1;
         if (left - 9 * min2_10 > 0) {
             left -= 9 * min2_10;
-            time+=9;
-            time+= left / min11 | 0
+            time += 9;
+            time += left / min11 | 0
         } else {
-            time+= (left / min2_10 | 0);
+            time += (left / min2_10 | 0);
         }
     }
     return time;
 }
+
+// console.log(phoneCall(3, 1, 2, 20))
+// console.log(phoneCall(2, 2, 1, 2))
 
 //todo alt
 // if (S < min1) return 0;
@@ -69,4 +72,4 @@ export function phoneCall(min1: number, min2_10: number, min11: number, s: numbe
 // S -= min2_10 * 9;
 // return S / min11 + 10 | 0;
 
-console.log(phoneCall(3, 1, 2, 20))
+
