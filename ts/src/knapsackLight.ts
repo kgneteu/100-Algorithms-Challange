@@ -76,7 +76,8 @@ export function knapsackLight(value1: number, weight1: number, value2: number, w
         }
     }
     return totalValue;
-    //todo
+
+    //todo check
     // return Math.max(
     //     maxW >= weight1 && value1,
     //     maxW >= weight2 && value2,
@@ -84,7 +85,7 @@ export function knapsackLight(value1: number, weight1: number, value2: number, w
     // );
 }
 
-console.log(knapsackLight(10, 5, 6, 4, 8)) //10
-console.log(knapsackLight(10, 5, 6, 4, 9)) //16
-console.log(knapsackLight(5, 3, 7, 4, 6)) //7
-console.log(knapsackLight(15, 2, 20, 3, 2)) //15
+// console.log(knapsackLight(10, 5, 6, 4, 8)) //10
+// console.log(knapsackLight(10, 5, 6, 4, 9)) //16
+// console.log(knapsackLight(5, 3, 7, 4, 6)) //7
+// console.log(knapsackLight(15, 2, 20, 3, 2)) //15
