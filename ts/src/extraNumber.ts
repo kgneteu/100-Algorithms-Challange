@@ -33,8 +33,7 @@
 export function extraNumber(a: number, b: number, c: number): number {
     return a === b ? c : a === c ? b : a;
     //Alt
-    //todo check below
-    return (a ^ b) ^ c
+    //return a ^ b ^ c;
 }
 
 //console.log(extraNumber(2, 7, 2))
