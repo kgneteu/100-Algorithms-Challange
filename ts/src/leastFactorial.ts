@@ -32,8 +32,6 @@ export function leastFactorial(n: number): number {
         result *= i++;
     }
     return result;
-
-
     // for (let i = 1; (result *= i++) < n;) ;
     // return result;
 }

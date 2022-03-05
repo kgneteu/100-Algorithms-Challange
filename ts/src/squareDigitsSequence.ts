@@ -20,7 +20,7 @@
 // a7 = 2^2 + 0^2 = 4
 // a8 = 4^2 = 1^6, which has already occurred before (a0)
 // Thus, there are 9 elements in the sequence.
-//
+
 // For a0 = 103, the output should be squareDigitsSequence(a0) = 4.
 // The sequence goes as follows: 103 -> 10 -> 1 -> 1, 4 elements altogether.
 //
@@ -46,7 +46,12 @@
 //     [output] integer
 
 export function squareDigitsSequence(a0: number): number {
-
+    const sums: { [index: number]: number } = {}
+    while (!sums.hasOwnProperty(a0)) {
+        sums[a0] = 0;
+        a0 = a0.toString().split("").reduce((a, v) => a + ((+v) ** 2), 0)
+    }
+    return Object.keys(sums).length + 1;
 }
 
 

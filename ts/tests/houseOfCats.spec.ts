@@ -6,10 +6,25 @@ describe(houseOfCats.name, () => {
         const response = houseOfCats(legs);
         expect(response).toEqual([1, 3]);
     });
-
     it('Test 2', () => {
         const legs = 2;
         const response = houseOfCats(legs);
         expect(response).toEqual([1]);
+    });
+    it('Test 3', () => {
+        const legs = 12;
+        const response = houseOfCats(legs);
+        expect(response).toEqual([2, 4, 6]);
+    });
+    it('Test 4', () => {
+        const legs = 4;
+        const response = houseOfCats(legs);
+        expect(response).toEqual([2]);
+    });
+
+    it('Test 5', () => {
+        const legs = 40;
+        const response = houseOfCats(legs);
+        expect(response).toEqual([2, 4, 6, 8, 10, 12, 14, 16, 18, 20]);
     });
 });

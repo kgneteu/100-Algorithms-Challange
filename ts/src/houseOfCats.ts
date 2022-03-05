@@ -34,9 +34,16 @@
 // Every possible number of people that can be in the house.
 
 export function houseOfCats(legs: number): number[] {
-  const maxPeople = Math.floor(legs / 2)
-
+    const peoples: number[] = []
+    if (legs === 2) return [1];
+    while (legs > 0) {
+        peoples.unshift(legs / 2 )
+        legs -= 4;
+    }
+    return peoples;
 }
 
-console.log(houseOfCats(6));
-console.log(houseOfCats(2));
+// console.log(houseOfCats(6));
+// console.log(houseOfCats(2));
+// console.log(houseOfCats(12));
+// console.log(houseOfCats(40));
