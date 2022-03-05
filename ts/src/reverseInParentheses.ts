@@ -67,8 +67,8 @@ export function reverseInParentheses(inputString: string) {
 
     return reverseSlice(inputString.split("")).join("");
 }
-
-console.log(reverseInParentheses("(bar)"));//rab
-console.log(reverseInParentheses("foo(bar)baz"));//foorabbaz
-console.log(reverseInParentheses("foo(bar)baz(blim)"));//foorabbazmilb
-console.log(reverseInParentheses("foo(bar(baz))blim"));// foobazrabblim
+//
+// console.log(reverseInParentheses("(bar)"));//rab
+// console.log(reverseInParentheses("foo(bar)baz"));//foorabbaz
+// console.log(reverseInParentheses("foo(bar)baz(blim)"));//foorabbazmilb
+// console.log(reverseInParentheses("foo(bar(baz))blim"));// foobazrabblim
