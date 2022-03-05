@@ -44,8 +44,18 @@
 // Upcoming, and Later, respectively.
 
 export function tasksTypes(deadlines: number[], day: number): number[] {
-
+    const statuses: number[] = [0, 0, 0]
+    deadlines.forEach(v => {
+        if (v <= day) {
+            statuses[0]++;
+        } else if (v > day + 7) {
+            statuses[2]++;
+        } else {
+            statuses[1]++;
+        }
+    })
+    return statuses
 }
 
-// console.log(tasksTypes([1, 2, 3, 4, 5], 2));
-// console.log(tasksTypes([1, 2, 4, 2, 10, 3, 1, 4, 5, 4, 9, 8], 1));
+console.log(tasksTypes([1, 2, 3, 4, 5], 2));
+console.log(tasksTypes([1, 2, 4, 2, 10, 3, 1, 4, 5, 4, 9, 8], 1));

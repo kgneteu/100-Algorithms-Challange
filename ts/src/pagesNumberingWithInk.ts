@@ -16,9 +16,6 @@
 // pagesNumberingWithInk(current, numberOfDigits) = 5.
 // The following numbers will be printed: 1, 2, 3, 4, 5.
 //
-// There are three independent sequences for systems "stage_1", "stage_2", and "dragon".
-// These sequences are [1, 2], [10, 12], and [11, 111], respectively.
-// The elements are in strictly increasing order for all three.
 //
 // For current = 21 and numberOfDigits = 5, the output should be
 // pagesNumberingWithInk(current, numberOfDigits) = 22.
@@ -55,7 +52,16 @@
 // The last printed page number.
 
 export function pagesNumberingWithInk(current: number, numberOfDigits: number): number {
-
+    while (numberOfDigits > 0) {
+        const digits = current.toString().length; //(Math.log10(current)+1 is slower
+        numberOfDigits -= digits;
+        if (numberOfDigits < digits) break
+        current++;
+    }
+    return current;
 }
 
-// console.log(pagesNumberingWithInk('G'));
+//console.log(pagesNumberingWithInk(1, 5));
+//console.log(pagesNumberingWithInk(21, 5));
+//console.log(pagesNumberingWithInk(8, 4));
+//console.log(pagesNumberingWithInk(8, 40000));

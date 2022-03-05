@@ -1,15 +1,27 @@
-// Thumbtack helps Professionals (Pros) grow their business by identifying new customers. Upon registering on Thumbtack, a Pro specifies which categories of services they provide. To help match customer requests with qualified Pros, Thumbtack maintains a list of Pros grouped by service categories.
+// Thumbtack helps Professionals (Pros) grow their business by identifying
+// new customers. Upon registering on Thumbtack, a Pro specifies which
+// categories of services they provide.
+// To help match customer requests with qualified Pros,
+// Thumbtack maintains a list of Pros grouped by service categories.
 //
-//     Given a list of pros and their category preferences, return the list of Pros for each category.
+// Given a list of pros and their category preferences,
+// return the list of Pros for each category.
 //
-//     Example
+// Example
 //
 // For pros = ["Jack", "Leon", "Maria"] and
 //
-// preferences = [ ["Computer repair", "Handyman", "House cleaning"], ["Computer lessons", "Computer repair", "Data recovery service"], ["Computer lessons", "House cleaning"]]
+// preferences = [ ["Computer repair", "Handyman", "House cleaning"],
+// ["Computer lessons", "Computer repair", "Data recovery service"],
+// ["Computer lessons", "House cleaning"]]
 //
 // the output should be
-// proCategorization(pros, preferences) = [ [ ["Computer lessons"], ["Leon", "Maria"]], [ ["Computer repair"], ["Jack", "Leon"]], [ ["Data recovery service"], ["Leon"]], [ ["Handyman"], ["Jack"]], [ ["House cleaning"], ["Jack", "Maria"]]]
+// proCategorization(pros, preferences) =
+// [ [ ["Computer lessons"], ["Leon", "Maria"]],
+// [ ["Computer repair"], ["Jack", "Leon"]],
+// [ ["Data recovery service"], ["Leon"]],
+// [ ["Handyman"], ["Jack"]],
+// [ ["House cleaning"], ["Jack", "Maria"]]]
 //
 // Hints
 //
@@ -38,10 +50,21 @@
 //
 //     [output] array.array.array.string Array of category descriptions sorted by category names. Each category should be listed in the following format: [[], [, ...]] where is a category name, and is a Pro that provides services in it.
 //     Each category present in preferences should be returned (in the right order), and Pros in each subarray should be sorted.
-export function proCategorization(pros: string[], preferences: string[][]): string[][][] {
 
+export function proCategorization(pros: string[], preferences: string[][]): string[][][] {
+    const cats: { [index: string]: Map<string, number> } = {}
+    for (let i in pros) {
+        for (let p of preferences[i]) {
+            if (cats.hasOwnProperty(p)) {
+                cats[p].set(pros[i], 0)
+            } else {
+                cats[p] = new Map([[pros[i], 0]])
+            }
+        }
+    }
+    return Object.keys(cats).sort().map(v => [[v], [...cats[v].keys()]])
 }
 
 // console.log(proCategorization(["Jack", "Leon", "Maria"], [["Computer repair", "Handyman", "House cleaning"],
-// ["Computer lessons", "Computer repair", "Data recovery service"],
-// ["Computer lessons", "House cleaning"]]));
+//     ["Computer lessons", "Computer repair", "Data recovery service"],
+//     ["Computer lessons", "House cleaning"]]));

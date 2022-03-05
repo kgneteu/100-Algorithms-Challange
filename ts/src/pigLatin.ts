@@ -11,7 +11,7 @@
 //
 // pigLatin("glove") should return "oveglay".
 // pigLatin("eight") should return "eightway".
-//     Hints
+// Hints
 //
 // split()
 // test()
@@ -19,7 +19,16 @@
 // push()
 
 export function pigLatin(str: string): string {
-
+    const vowels = "aeiouy";
+    if (vowels.includes(str[0])) {
+        return str + "way";
+    } else {
+        for (let i = 2; i < str.length - 1; i++) {
+            if (vowels.includes(str[i])) {
+                return str.slice(i) + str.slice(0, i) + "ay";
+            }
+        }
+    }
 }
 
 // console.log(pigLatin("glove"));

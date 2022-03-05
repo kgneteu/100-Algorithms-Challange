@@ -37,7 +37,15 @@
 // The minimal number of coins you can use to buy the banana.
 
 export function minimalNumberOfCoins(coins: number[], price: number): number {
-
+    let count = 0;
+    for (let i = coins.length - 1; i >= 0; i--) {
+       count += price / coins[i] | 0;
+       price -= coins[i] * (price / coins[i] | 0);
+       if (price === 0) break;
+    }
+    return count;
 }
 
 console.log(minimalNumberOfCoins([1, 2, 10], 28));
+console.log(minimalNumberOfCoins([1, 2, 10], 41));
+console.log(minimalNumberOfCoins([1, 2, 10], 2));
