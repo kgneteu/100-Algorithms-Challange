@@ -14,4 +14,22 @@ describe(tasksTypes.name, () => {
         const response = tasksTypes(deadlines, day);
         expect(response).toEqual([2, 8, 2]);
     });
+    it('Test 3', () => {
+        const deadlines = [1];
+        const day = 1;
+        const response = tasksTypes(deadlines, day);
+        expect(response).toEqual([1, 0, 0]);
+    });
+    it('Test 4', () => {
+        const deadlines = [8];
+        const day = 1;
+        const response = tasksTypes(deadlines, day);
+        expect(response).toEqual([0, 1, 0]);
+    });
+    it('Test 5', () => {
+        const deadlines = [4, 14, 16];
+        const day = 7;
+        const response = tasksTypes(deadlines, day);
+        expect(response).toEqual([1, 1, 1]);
+    });
 });
