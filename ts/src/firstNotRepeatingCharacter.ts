@@ -37,8 +37,9 @@ export function firstNotRepeatingCharacter(s: string): string {
     for (let c of s) {
         chars.hasOwnProperty(c) ? chars[c] += 1 : chars[c] = 1;
     }
-    return Object.entries(chars).toString();
+    const c = Object.entries(chars).filter(c => c[1] === 1);
+    return c.length ? c[0][0] : "_"
 }
-
-console.log(firstNotRepeatingCharacter('abacabad'));
-console.log(firstNotRepeatingCharacter('abacabaabacaba'));
+//
+// console.log(firstNotRepeatingCharacter('abacabad'));
+// console.log(firstNotRepeatingCharacter('abacabaabacaba'));

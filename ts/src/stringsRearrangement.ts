@@ -1,104 +1,100 @@
-export function stringsRearrangement(inputArray: string[]):boolean{
-    let ret = false;
-    let solution:string[] = [];
+// Given an array of equal-length strings, you'd like to know if
+// it's possible to rearrange the order of the elements in such a way
+// that each consecutive pair of strings differ by exactly one character.
+// Return true if it's possible, and false if not.
+//
+// Note: You're only rearranging the order of the strings,
+// not the order of the letters within the strings!
+//
+// Example
+//
+// For inputArray = ["aba", "bbb", "bab"], the output should be
+// solution(inputArray) = false.
+//
+//     There are 6 possible arrangements for these strings:
+//
+//     ["aba", "bbb", "bab"]
+//     ["aba", "bab", "bbb"]
+//     ["bbb", "aba", "bab"]
+//     ["bbb", "bab", "aba"]
+//     ["bab", "bbb", "aba"]
+//     ["bab", "aba", "bbb"]
+// None of these satisfy the condition of consecutive strings differing by 1 character,
+// so the answer is false.
+//
+// For inputArray = ["ab", "bb", "aa"], the output should be
+// solution(inputArray) = true.
+//
+// It's possible to arrange these strings in a way that each consecutive pair of strings
+// differ by 1 character
+// (eg: "aa", "ab", "bb" or "bb", "ab", "aa"), so return true.
+//
+// Input/Output
+//
+//     [execution time limit] 5 seconds (ts)
+//
+//     [input] array.string inputArray
+//
+// A non-empty array of strings of lowercase letters.
+//
+//     Guaranteed constraints:
+//     2 ≤ inputArray.length ≤ 10,
+//     1 ≤ inputArray[i].length ≤ 15.
+//
+//     [output] boolean
+//
+// Return true if the strings can be reordered in such a way that each neighbouring pair of strings differ by exactly one character (false otherwise).
 
-    function bt () {
-        for (let i = 0; i<inputArray.length; i++) {
-            if(ret) break;
-            solution.push(inputArray.splice(i,1)[0]);
-            if (inputArray.length === 0) {
-                ret = ret || checkSolution();
+export function stringsRearrangement(inputArray: string[]): boolean {
+    const test: string[] = [inputArray.shift()]
+
+    function isSimilar(a: string, b: string): boolean {
+        if (a.length === 0 || a.length !== b.length) return false;
+        let diff = false;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] !== b[i]) {
+                if (diff) return false;
+                diff = true;
             }
-            else{
-                bt();
-            }
-            inputArray.splice(i,0,solution.pop());
         }
-
+        return diff; //exactly one diff
     }
-    function checkSolution () {
-        for (let i = 0; i < solution.length - 1; i++){
-            let diff =0;
-            for (let j = 0; j<solution[i].length; j++) {
-                if (solution[i][j] !== solution[i+1][j]){
-                    diff++;
+
+    function fit(s: string): boolean {
+        for (let i = 0; i < test.length; i++) {
+            if (isSimilar(s, test[i])) {
+                if (i === 0) {
+                    test.unshift(s)
+                    return true;
+                } else {
+                    if (isSimilar(s, test[i - 1])) {
+                        test.splice(i, 0, s)
+                        return true;
+                    } else if (i === test.length -1){
+                        test.push(s);
+                        return true;
+                    }
                 }
             }
-            if(diff !== 1){
-                return false;
+        }
+        return false;
+    }
+
+    while (inputArray.length > 0) {
+        let found = false;
+        for (let i = 0; i < inputArray.length ; i++) {
+            if (fit(inputArray[i])) {
+                inputArray.splice(i, 1)
+                found = true;
+                break;
             }
         }
-        return true;
+        if (!found) break;
     }
-    bt();
-    return ret;
+    return inputArray.length === 0;
 }
 
-// function solution(a) {
-//     for (let i = 0; i < a.length; i++) {
-//         let remaining = findNext(a[i], a);
-//         if (remaining.length === 0) return true;
-//     }
-//     return false;
-// }
-//
-// function findNext(current, a) {
-//     if (a.length === 0) return a;
-//     for (let i = 0; i < a.length; i++) {
-//         if (differsByOneChar(current, a[i])) {
-//             let remaining = findNext(a[i], a.slice(0, i).concat(a.slice(i+1)));
-//             if (remaining.length === 0) return remaining;
-//         }
-//     }
-//     return a;
-// }
-//
-// function differsByOneChar(s1, s2) {
-//     let mismatches = 0;
-//     for (let i = 0; i < s1.length; i++) {
-//         if (s1[i] !== s2[i]) mismatches++;
-//         if (mismatches > 1) break;
-//     }
-//     return mismatches === 1;
-// }
 
-boolean solution(String[] inputArray) {
-
-    boolean[] used = new boolean[inputArray.length];
-    findSequence(inputArray, null, used, 0);
-    return success;
-}
-
-boolean success = false; // modified by findSequence
-
-// recursive backtracking procedure to find admissible
-// sequence of strings in the array. String prev is the
-// previous string in the sequence, used[] keeps track
-// of which strings have been used so far, and n is the
-// current length of the sequence.
-// void findSequence(String[] a, String prev, boolean[] used, int n) {
-//     if (n == a.length) {
-//         success = true;
-//         return;
-//     }
-//     for (int i = 0; i < a.length; i++) {
-//         if (!used[i] && (prev == null || differByOne(prev, a[i]))) {
-//             used[i] = true;
-//             findSequence(a, a[i], used, n+1);
-//             used[i] = false;
-//         }
-//     }
-// }
-//
-// boolean differByOne(String a, String b) {
-//     int count = 0;
-//     for (int i = 0; i < a.length(); i++) {
-//         if (a.charAt(i) != b.charAt(i)) {
-//             count++;
-//         }
-//     }
-//     return count == 1;
-// }
-//todo check
-console.log(stringsRearrangement(["aba", "bbb", "bab"]));
-console.log(stringsRearrangement(["ab", "bb", "aa"]));
+//todo works, but i wouldn't trust it is should be tree or permutation
+//console.log(stringsRearrangement(["aba", "bbb", "bab"]));
+//console.log(stringsRearrangement(["ab", "bb", "aa"]));
