@@ -21,8 +21,10 @@
 //
 //     [output] integer
 
-//todo task is screwed up ?
+
 export function digitsProduct(product: number): number {
+    //task is incorrect
+
     // let min = -1;
     // if (product === 0) return 10;
     // if (product < 10) return product;
@@ -35,9 +37,7 @@ export function digitsProduct(product: number): number {
 
     if (product == 0) return 10;
     if (product == 1) return 1;
-    let divisor = 10,
-        power = 1,
-        result = 0;
+    let divisor = 10, power = 1, result = 0;
     while (product > 1) {
         if (--divisor == 1) return -1;
         while (product % divisor == 0) {
@@ -49,45 +49,12 @@ export function digitsProduct(product: number): number {
     return result;
 }
 
-// function solution(product) {
-//
-//     if(product === 0) return 10;
-//     if(product === 1) return 1;
-//
-//     let factors = [];
-//
-//     for(let factor = 9; factor > 1; factor--){
-//         while(product % factor === 0){
-//             factors.push(factor);
-//             product /= factor;
-//         }
-//     }
-//
-//     if(product > 1){
-//         return -1;
-//     } else {
-//         return parseInt(factors.reverse().join(''));
-//     }
-// }
-
-// function solution(p, f = []) {
-//     if(p === 0) return 10;
-//     if(p === 1) return 1;
-//     for(let i = 9; i > 1; i--){
-//         while(p%i === 0){
-//             f.unshift(i)
-//             p /= i;
-//         }
-//     }
-//     return p > 1 ? -1 : parseInt(f.join(''))
-// }
-
-console.log(digitsProduct(12)) //26
-console.log(digitsProduct(7)) //26
-console.log(digitsProduct(4)) //26
+// console.log(digitsProduct(12)) //26
+// console.log(digitsProduct(7)) //26
+// console.log(digitsProduct(4)) //26
 // console.log(digitsProduct(450), 2 * 5 * 5 * 9) //2559
 // console.log(digitsProduct(19))//-1
-console.log(digitsProduct(0))//10
+// console.log(digitsProduct(0))//10
 // console.log(digitsProduct(13))//-1
 // console.log(digitsProduct(1))//-1
 // console.log(digitsProduct(243))//399

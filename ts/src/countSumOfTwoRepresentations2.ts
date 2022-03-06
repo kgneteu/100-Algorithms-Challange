@@ -38,6 +38,22 @@
 
 //todo rethink
 export function countSumOfTwoRepresentations2(n: number, l: number, r: number): number {
+    console.log(l,r,n)
+    if (l+r>n){
+        console.log(r-l+1-(l+r-n))
+    } else {
+        console.log(n-r)
+        console.log(n-l)
+        // 8,9,10,11,12,13,14,15,16
+        // 8,9,10,11,12,13,14,15,16
+        console.log(r-l+1)
+    }
+
+    //2,3,4,5
+    //2,3,4,5
+    // l=2 r=9 n 10
+    // 1, 2,3,4,5,6,7,8,9 ,10  9-2+1
+    // 1, 2,3,4,5,6,7,8,9 ,10
     //too slow
     // let total = 0;
     // for (let i = l; (i <= r) && (i + l <= n); i++) {
@@ -56,17 +72,21 @@ export function countSumOfTwoRepresentations2(n: number, l: number, r: number): 
     // return total;
 
     //
-    // if (2 * r < n || 2 * l > n) return 0;
-    // var min = Math.max(l, n - r);
-    // var max = Math.min(r, n - l);
-    // var mid = Math.floor((max + min) / 2);
-    // return mid - min + 1;
+    if (2 * r < n || 2 * l > n) return 0;
+    let min = Math.max(l, n - r);
+    console.log(l, n-r)
+    let max = Math.min(r, n - l);
+    console.log(r, n-l)
+    let mid = Math.floor((max + min) / 2);
+    return mid - min + 1;
 
 
 };
 
-
-//console.log(countSumOfTwoRepresentations2(6, 2, 5))
-console.log(countSumOfTwoRepresentations2(6, 3, 3))
+//
+// console.log(countSumOfTwoRepresentations2(6, 2, 5))
+// console.log(countSumOfTwoRepresentations2(6, 3, 3))
+// console.log(countSumOfTwoRepresentations2(6, 2, 3))
+console.log(countSumOfTwoRepresentations2(24, 8, 16))
 // console.log(countSumOfTwoRepresentations2(10, 9, 11))
 // console.log(countSumOfTwoRepresentations2(1000000, 490000, 900000))
