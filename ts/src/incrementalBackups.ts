@@ -63,7 +63,7 @@
 
 export function incrementalBackups(lastBackupTime: number, changes: number[][]): number[] {
     const files: number[] = [];
-    for (let f of changes) {
+    for (const f of changes) {
         if (f[0] > lastBackupTime) {
             if (!files.includes(f[1])) {
                 files.push(f[1])

@@ -43,4 +43,4 @@ export function fermactor(n: number): number[] {
 }
 
 console.log(fermactor(15));
-console.log(fermactor(14));
+console.log(fermactor(51));

@@ -23,8 +23,8 @@
 // The result string after replacing all of its characters.
 
 export function alphabeticShift(s: string): string {
-    let result: string = '';
-    for (let c of s) {
+    let result = '';
+    for (const c of s) {
         if (c === 'z') {
             result += 'a';
         } else {

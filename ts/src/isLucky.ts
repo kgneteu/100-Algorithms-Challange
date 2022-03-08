@@ -29,8 +29,8 @@
 //
 // true if n is a lucky ticket number, false otherwise.
 export function isLucky(n: number): boolean {
-    let ticketNo = n.toString();
-    let sum1 = ticketNo.substring(0, ticketNo.length / 2).split("").map(a => +a).reduce((ac, v) => ac + v);
-    let sum2 = ticketNo.substring(ticketNo.length / 2).split("").map(a => +a).reduce((ac, v) => ac + v);
+    const ticketNo = n.toString();
+    const sum1 = ticketNo.substring(0, ticketNo.length / 2).split("").map(a => +a).reduce((ac, v) => ac + v);
+    const sum2 = ticketNo.substring(ticketNo.length / 2).split("").map(a => +a).reduce((ac, v) => ac + v);
     return sum1 === sum2;
 }

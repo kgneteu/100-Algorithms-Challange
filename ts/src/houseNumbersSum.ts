@@ -31,7 +31,7 @@
 
 export function houseNumbersSum(inputArray: number[]): number {
     let total = 0;
-    for (let n of inputArray) {
+    for (const n of inputArray) {
         if (n === 0) break;
         total += n;
     }

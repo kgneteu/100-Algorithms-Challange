@@ -46,9 +46,9 @@
 //     [output] integer
 export function matrixElementsSum(matrix: any[][]): number {
     let total = 0;
-    let haunted = new Array(matrix[0].length).fill(false);
-    for (let floor in matrix) {
-        for (let room in matrix[0]) {
+    const haunted = new Array(matrix[0].length).fill(false);
+    for (const floor in matrix) {
+        for (const room in matrix[0]) {
             const price = matrix[floor][room];
             if (price === 0) {
                 haunted[room] = true;

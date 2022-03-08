@@ -27,7 +27,7 @@
 // Situation after applying the algorithm - array in the same format as input with the same length.
 
 export function switchLights(a: number[]): number[] {
-    let lights = [...a]
+    const lights = [...a]
     for (let i = 0; i < lights.length; i++) {
         if (lights[i] === 1) {
             for (let j = i; j >= 0; j--) {

@@ -14,18 +14,19 @@
 // sumOddFibonacciNums(1000) should return 1785
 // sumOddFibonacciNums(4000000) should return 4613732
 
-function* FibonacciGen(n: number): Generator<number> {
-    let [a, b] = [1, 1]
-    let i = 2
-    yield 0 //F(0)
-    yield 1
-    yield 1
-    while (i < n) {
-        [a, b] = [b, a + b]
-        yield b;
-    }
+// function* FibonacciGen(n: number): Generator<number> {
+//     let [a, b] = [1, 1]
+//     let i = 2
+//     yield 0 //F(0)
+//     yield 1
+//     yield 1
+//     while (i < n) {
+//         [a, b] = [b, a + b]
+//         yield b;
+//     }
+//
+// }
 
-}
 
 export function sumOddFibonacciNums(num: number): number {
     let total = 0;

@@ -42,7 +42,7 @@
 export function newNumeralSystem(number: string): string[] {
     let letter1 = number.charCodeAt(0);
     let letter2 = 'A'.charCodeAt(0);
-    let result: string[] = []
+    const result: string[] = []
 
     while (letter1 >= letter2) {
         result.push(`${String.fromCharCode(letter2)} + ${String.fromCharCode(letter1)}`)

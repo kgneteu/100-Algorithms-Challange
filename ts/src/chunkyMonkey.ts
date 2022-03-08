@@ -11,7 +11,7 @@
 // slice()
 
 export function chunkyMonkey(arr: any[], size: number): any[][] {
-    let result = [];
+    const result = [];
     let index = 0;
     while (index < arr.length) {
         result.push(arr.slice(index, index + size));

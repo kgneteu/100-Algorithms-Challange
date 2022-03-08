@@ -33,7 +33,7 @@
 //     [output] integer
 
 export function chessKnight(cell: string): number {
-    let moves = [[-2, -1], [-2, 1], [-1, -2], [-1, 2], [2, -1], [2, 1], [1, -2], [1, 2]]
+    const moves = [[-2, -1], [-2, 1], [-1, -2], [-1, 2], [2, -1], [2, 1], [1, -2], [1, 2]]
     const knightY = cell.charCodeAt(0) - "a".charCodeAt(0)
     const knightX = +cell[1] - 1;
     return moves.filter(v => knightY + v[0] >= 0 && knightY + v[0] < 8 && knightX + v[1] >= 0 && knightX + v[1] < 8).length;

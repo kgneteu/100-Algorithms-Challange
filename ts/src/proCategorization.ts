@@ -53,8 +53,8 @@
 
 export function proCategorization(pros: string[], preferences: string[][]): string[][][] {
     const cats: { [index: string]: Map<string, number> } = {}
-    for (let i in pros) {
-        for (let p of preferences[i]) {
+    for (const i in pros) {
+        for (const p of preferences[i]) {
             if (cats.hasOwnProperty(p)) {
                 cats[p].set(pros[i], 0)
             } else {

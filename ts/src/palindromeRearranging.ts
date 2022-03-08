@@ -27,11 +27,11 @@
 
 export function palindromeRearranging(inputString: string): boolean {
     const stat: { [index: string]: number } = {};
-    for (let c of inputString) {
+    for (const c of inputString) {
         stat.hasOwnProperty(c) ? stat[c]++ : stat[c] = 1;
     }
     let odds = 0;
-    for (let c in stat) {
+    for (const c in stat) {
         if (stat[c] % 2 !== 0) {
             odds++;
             if (odds > 1) return false;

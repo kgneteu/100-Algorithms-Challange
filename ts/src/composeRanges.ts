@@ -21,7 +21,7 @@
 //     [output] array.string
 
 export function composeRanges(nums: number[]): string[] {
-    let ranges = [];
+    const ranges = [];
     let rangeStart = nums[0];
     for (let i = 0; i < nums.length - 1; i++) {
         if (nums[i] + 1 !== nums[i + 1]) {

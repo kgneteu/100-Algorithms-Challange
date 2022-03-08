@@ -24,7 +24,7 @@
 
 
 export function spiralNumbers(n: number): number[][] {
-    let arr = Array(n * n).fill(null).map((el, i) => i + 1);
+    const arr = Array(n * n).fill(null).map((el, i) => i + 1);
     let spiral: number[][] = [];
     let i = 0;
     while (arr.length) {

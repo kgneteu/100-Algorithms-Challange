@@ -14,7 +14,7 @@
 
 export function missingLetters(str: string): string {
     let code = str.charCodeAt(0);
-    for (let c of str.split("")) {
+    for (const c of str.split("")) {
         if (c.charCodeAt(0) !== code) return String.fromCharCode(code);
         code++;
     }

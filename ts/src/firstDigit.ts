@@ -28,7 +28,7 @@
 
 export function firstDigit(inputString: string): string {
     const digits = "0123456789";
-    for (let c of inputString.split("")) {
+    for (const c of inputString.split("")) {
         if (digits.includes(c)) {
             return c;
         }

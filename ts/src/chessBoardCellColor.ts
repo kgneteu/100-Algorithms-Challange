@@ -23,10 +23,10 @@
 
 export function chessBoardCellColor(cell1: string, cell2: string): boolean {
 
-    let c1Y = cell1.charCodeAt(0) - "A".charCodeAt(0);
-    let c1X = parseInt(cell1[1]);
-    let c2Y = cell2.charCodeAt(0) - "A".charCodeAt(0);
-    let c2X = parseInt(cell2[1]);
+    const c1Y = cell1.charCodeAt(0) - "A".charCodeAt(0);
+    const c1X = parseInt(cell1[1]);
+    const c2Y = cell2.charCodeAt(0) - "A".charCodeAt(0);
+    const c2X = parseInt(cell2[1]);
 
     if (Math.abs(c1Y - c2Y) % 2 !== 0) {
         return Math.abs(c1X - c2X) % 2 !== 0

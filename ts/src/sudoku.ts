@@ -57,7 +57,7 @@
 // true if the given grid represents a correct solution to Sudoku, false otherwise.
 
 function checkSubgrid(i: number, j: number, grid: number[][]) {
-    let numbers = new Set()
+    const numbers = new Set()
     for (let k = i; k < i + 3; k++) {
         for (let m = j; m < j + 3; m++) {
             numbers.add(grid[k][m])

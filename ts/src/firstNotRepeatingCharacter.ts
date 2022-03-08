@@ -34,7 +34,7 @@
 
 export function firstNotRepeatingCharacter(s: string): string {
     const chars: { [index: string]: number } = {}
-    for (let c of s) {
+    for (const c of s) {
         chars.hasOwnProperty(c) ? chars[c] += 1 : chars[c] = 1;
     }
     const c = Object.entries(chars).filter(c => c[1] === 1);

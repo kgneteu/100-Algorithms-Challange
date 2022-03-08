@@ -34,13 +34,13 @@ export function commonCharacterCount(s1: string, s2: string): number {
     let common = 0;
     const str1: { [index: string]: number } = {};
     const str2: { [index: string]: number } = {};
-    for (let c of s1.split("")) {
+    for (const c of s1.split("")) {
         str1.hasOwnProperty(c) ? str1[c]++ : str1[c] = 1;
     }
-    for (let c of s2.split("")) {
+    for (const c of s2.split("")) {
         str2.hasOwnProperty(c) ? str2[c]++ : str2[c] = 1;
     }
-    for (let c of Object.keys(str1)) {
+    for (const c of Object.keys(str1)) {
         if (str2.hasOwnProperty(c)) {
             common += Math.min(str1[c], str2[c]);
         }

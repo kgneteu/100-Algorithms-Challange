@@ -27,8 +27,8 @@
 
 export function differentSymbolsNaive(s: string): number {
     //return new Set(s.split("")).size;
-    let chars:string[] = [];
-    for (let c of s) {
+    const chars:string[] = [];
+    for (const c of s) {
         if (!chars.includes(c)){
             chars.push(c)
         }

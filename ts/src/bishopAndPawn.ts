@@ -28,10 +28,10 @@
 //
 
 export function bishopAndPawn(bishop: string, pawn: string): boolean {
-    let bX = bishop.charCodeAt(0);
-    let bY = parseInt(bishop[1]);
-    let pX = pawn.charCodeAt(0);
-    let pY = parseInt(pawn[1]);
+    const bX = bishop.charCodeAt(0);
+    const bY = parseInt(bishop[1]);
+    const pX = pawn.charCodeAt(0);
+    const pY = parseInt(pawn[1]);
 
     return Math.abs(bX - pX) === Math.abs(bY - pY);
 }

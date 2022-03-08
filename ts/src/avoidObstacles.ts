@@ -32,7 +32,7 @@
 
 export function avoidObstacles(inputArray: number[]): number {
     const max = Math.max(...inputArray);
-    let minLength = max + 1;
+    const minLength = max + 1;
     for (let i = 2; i < max - 1; i++) {
         if (inputArray.every(v => v % i !== 0)) {
             return i;

@@ -35,7 +35,7 @@
 export function convertString(s: string, t: string): boolean {
     let word = "";
     let index = 0;
-    for (let c of s) {
+    for (const c of s) {
         if (c === t[index]) {
             word = word.concat(c)
             if (word === t) return true;

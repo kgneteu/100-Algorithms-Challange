@@ -46,7 +46,7 @@
 
 export function incorrectPasscodeAttempts(passcode: string, attempts: string[]): boolean {
     let failed = 0;
-    for (let attempt of attempts) {
+    for (const attempt of attempts) {
         if (attempt === passcode) {
             failed = 0;
         } else {

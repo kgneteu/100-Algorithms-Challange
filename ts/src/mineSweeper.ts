@@ -40,7 +40,7 @@
 
 export function minesweeper(matrix: boolean[][]): number[][] {
 
-    let board: number[][] = new Array(matrix.length).fill(0)
+    const board: number[][] = new Array(matrix.length).fill(0)
         .map(() => new Array(matrix[0].length).fill(0));
 
     for (let i = 0; i < matrix.length; i++) {

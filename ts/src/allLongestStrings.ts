@@ -24,7 +24,7 @@
 
 export function allLongestStrings(strings: string[]) {
     let maxLength = 0;
-    for (let s of strings) {
+    for (const s of strings) {
         if (s.length > maxLength) maxLength = s.length;
     }
     return strings.filter(v => v.length === maxLength);

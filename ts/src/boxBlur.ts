@@ -51,7 +51,7 @@
 export function boxBlur(image: number[][]): number[][] {
     const images: number[][] = []
     for (let i = 0; i < image.length - 2; i += 1) {
-        let row: number[] = []
+        const row: number[] = []
         for (let j = 0; j < image[0].length - 2; j++) {
             let sum = 0;
             for (let k = i; k < 3 + i; k++) {

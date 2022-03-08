@@ -39,7 +39,7 @@
 //     [output] integer
 
 export function crossingSum(matrix: number[][], a: number, b: number): number {
-    let rowValue = matrix[a].reduce((acc, v) => acc + v);
+    const rowValue = matrix[a].reduce((acc, v) => acc + v);
     let colValue = 0;
     for (let i = 0; i < matrix.length; i++) {
         colValue += matrix[i][b]

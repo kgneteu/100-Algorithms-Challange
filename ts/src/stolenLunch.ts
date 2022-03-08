@@ -34,7 +34,7 @@ export function stolenLunch(note: string): string {
     const decrypted = "0123456789abcdefghij";
 
     const cipher = note.split("");
-    for (let i in cipher) {
+    for (const i in cipher) {
         const index = encrypted.indexOf(cipher[i]);
         if (index !==-1) cipher[i] = decrypted[index];
     }

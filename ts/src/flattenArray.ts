@@ -11,7 +11,7 @@
 // isArray()
 // push()
 
-export function flattenArray(arr: any[]): any[] {
+export function flattenArray(arr: Array<any>): Array<any> {
     let result: any[] = [];
     for (const elem of arr) {
         if (Array.isArray(elem)) {

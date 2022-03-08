@@ -33,7 +33,7 @@ export function sortByHeight(a: number[]): number[] {
     const filteredArray = a.filter(v => v !== -1).sort((a, b) => a - b);
     const sortedArray = [];
     let index = 0;
-    for (let n of a) {
+    for (const n of a) {
         if (n == -1) {
             sortedArray.push(n)
         } else {

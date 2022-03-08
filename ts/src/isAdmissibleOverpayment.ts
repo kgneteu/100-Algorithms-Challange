@@ -76,7 +76,7 @@
 export function isAdmissibleOverpayment(prices: number[], notes: string[], x: number): boolean {
     let overpayment = 0;
     for (let i = 0; i < prices.length; i++) {
-        let percent = parseFloat(notes[i])
+        const percent = parseFloat(notes[i])
         if (!isNaN(percent)) {
             if (notes[i].includes("higher")) {
                 const oldPrice = 100 * prices[i] / (percent + 100)

@@ -50,7 +50,7 @@
 // sorted in ascending order.
 
 export function ratingThreshold(threshold: number, ratings: number[][]): number[] {
-    let indices: number[] = [];
+    const indices: number[] = [];
     ratings.forEach((v, i) => {
         if (v.reduce((a, v) => a + v) / v.length < threshold) indices.push(i)
     })

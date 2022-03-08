@@ -31,8 +31,8 @@
 export function isMAC48Address(inputString: string):boolean{
     const mac = inputString.split("-");
     if (mac.length !== 6) return false;
-    for (let b of mac) {
-        let n = parseInt(b, 16);
+    for (const b of mac) {
+        const n = parseInt(b, 16);
         if (isNaN(n)) return false;
         if (n.toString(16).padStart(2,"0") !== b.toLowerCase()) return false;
     }

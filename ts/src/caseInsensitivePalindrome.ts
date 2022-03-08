@@ -29,8 +29,8 @@
 //     [output] boolean
 
 export function isCaseInsensitivePalindrome(inputString: string): boolean {
-    let s1 = inputString.toLowerCase();
-    let s2 = s1.split("").reverse().join("");
+    const s1 = inputString.toLowerCase();
+    const s2 = s1.split("").reverse().join("");
     return s1 === s2;
 }
 

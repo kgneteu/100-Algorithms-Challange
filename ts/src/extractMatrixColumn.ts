@@ -26,8 +26,8 @@
 //     [output] array.integer
 
 export function extractMatrixColumn(matrix: number[][], column: number): number[] {
-    let col: number[] = []
-    for (let row of matrix) {
+    const col: number[] = []
+    for (const row of matrix) {
         col.push(row[column])
     }
     return col;

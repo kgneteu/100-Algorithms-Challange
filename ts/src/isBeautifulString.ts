@@ -39,10 +39,10 @@
 
 export function isBeautifulString(inputString: string): boolean {
     const stat: { [index: string]: number } = {}
-    for (let c of inputString) {
+    for (const c of inputString) {
         stat.hasOwnProperty(c) ? stat[c]++ : stat[c] = 1;
     }
-    let sorted = Object.keys(stat).sort();
+    const sorted = Object.keys(stat).sort();
     if (sorted[0] !== "a") return false;
     for (let i = 1; i < sorted.length; i++) {
         if (sorted[i].charCodeAt(0) - sorted[i - 1].charCodeAt(0) !== 1) return false;

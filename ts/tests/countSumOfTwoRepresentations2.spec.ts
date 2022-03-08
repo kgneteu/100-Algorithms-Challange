@@ -23,7 +23,7 @@ describe(countSumOfTwoRepresentations2.name, () => {
     });
     it('Test 6', () => {
         const response = countSumOfTwoRepresentations2(93, 24, 58);
-        expect(response).toBe(2);
+        expect(response).toBe(12);
     });
     it('Test 7', () => {
         const response = countSumOfTwoRepresentations2(1000000, 490000, 900000);

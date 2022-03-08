@@ -63,7 +63,7 @@
 
 export function launchSequenceChecker(systemNames: string[], stepNumbers: number[]): boolean {
     const systems: { [index: string]: Array<number> } = {}
-    for (let i in systemNames) {
+    for (const i in systemNames) {
         if (systems.hasOwnProperty(systemNames[i])) {
             if (systems[systemNames[i]][systems[systemNames[i]].length-1] >= stepNumbers[i]) return false;
             systems[systemNames[i]].push(stepNumbers[i])

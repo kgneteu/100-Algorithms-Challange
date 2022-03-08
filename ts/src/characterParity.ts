@@ -17,7 +17,7 @@
 //     [output] string
 
 export function characterParity(symbol: string): string {
-    let v = parseInt(symbol);
+    const v = parseInt(symbol);
     if (isNaN(v)) {
         return "not a digit";
     } else if (v % 2 === 0) {

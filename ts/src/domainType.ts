@@ -40,8 +40,8 @@ export function domainType(domains: string[]): string[] {
         net: "network",
         info: "information"
     }
-    let result: string[] = [];
-    for (let domain of domains) {
+    const result: string[] = [];
+    for (const domain of domains) {
         result.push(domainTypes[domain.split(".").pop()]);
     }
     return result;

@@ -31,8 +31,8 @@
 //     and 'greater' if int(a) > int(b), where int(x) is equal to integer represented by the string x.
 
 export function compareIntegers(a: string, b: string): string {
-    let v1 = parseInt(a);
-    let v2 = parseInt(b);
+    const v1 = parseInt(a);
+    const v2 = parseInt(b);
     if (v1 > v2) {
         return "greater";
     } else if (v1 < v2) {

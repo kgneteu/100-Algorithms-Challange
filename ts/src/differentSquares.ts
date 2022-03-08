@@ -44,10 +44,10 @@
 // The number of different 2 × 2 squares in matrix.
 
 export function differentSquares(matrix: number[][]): number {
-    let total = new Set();
+    const total = new Set();
     for (let i = 0; i < matrix.length - 1; i++) {
         for (let j = 0; j < matrix[0].length - 1; j++) {
-            let square = "" + matrix[i][j] + matrix[i + 1][j] + matrix[i + 1][j + 1] + matrix[i][j + 1];
+            const square = "" + matrix[i][j] + matrix[i + 1][j] + matrix[i + 1][j + 1] + matrix[i][j + 1];
             total.add(square);
         }
     }

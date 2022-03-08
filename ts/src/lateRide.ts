@@ -48,7 +48,7 @@ export function lateRide(n: number): number {
     // return (h - h % 10) / 10 + h % 10 + (m - m % 10) / 10 + m % 10;
 
     //Alt
-    let [h, m] = [n / 60 | 0, n % 60]
+    const [h, m] = [n / 60 | 0, n % 60]
     return (h / 10 | 0) + h % 10 + (m / 10 | 0) + m % 10;
 }
 

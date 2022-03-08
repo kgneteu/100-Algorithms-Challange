@@ -37,11 +37,11 @@ export function stringsConstruction(a: string, b: string): number {
     const strA: { [index: string]: number } = {}
     const strB: { [index: string]: number } = {}
 
-    for (let c of a.split("")) {
+    for (const c of a.split("")) {
         strA.hasOwnProperty(c) ? strA[c]++ : strA[c] = 1;
     }
 
-    for (let c of b.split("")) {
+    for (const c of b.split("")) {
         if (strA.hasOwnProperty(c)) {
             strB.hasOwnProperty(c) ? strB[c]++ : strB[c] = 1;
         }
@@ -49,7 +49,7 @@ export function stringsConstruction(a: string, b: string): number {
 
     const minWords: number[] = [];
 
-    for (let e of Object.entries(strA)) {
+    for (const e of Object.entries(strA)) {
         if (strB.hasOwnProperty(e[0])) {
             minWords.push(Math.floor(strB[e[0]] / e[1]));
             console.log(e[1])

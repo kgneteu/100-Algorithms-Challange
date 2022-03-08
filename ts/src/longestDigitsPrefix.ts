@@ -23,8 +23,8 @@
 //     [output] string
 
 export function longestDigitsPrefix(inputString: string): string {
-    let result = [];
-    for (let c of inputString.split("")) {
+    const result = [];
+    for (const c of inputString.split("")) {
         if (isNaN(parseInt(c))) {
             break;
         }

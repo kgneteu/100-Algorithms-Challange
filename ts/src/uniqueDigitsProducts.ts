@@ -36,9 +36,10 @@
 // The number of different digit products in a
 
 export function uniqueDigitProducts(a: number[]): number {
-    let sums: Set<number> = new Set();
+    const sums: Set<number> = new Set();
     for (const n of a) {
-        sums.add(n.toString().split("").map(v => +v).reduce((ac, v) => ac * v))
+        sums.add(n.toString().split("")
+            .map(v => +v).reduce((ac, v) => ac * v))
     }
     return sums.size;
 }

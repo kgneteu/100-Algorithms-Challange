@@ -19,7 +19,7 @@
 //     [output] array.integer
 
 export function alternatingSums(data: number[]): number[] {
-    let teams = [0, 0]
+    const teams = [0, 0]
     for (let i = 0; i < data.length; i++) {
         teams[(i % 2)] = teams[(i % 2)] + data[i];
     }

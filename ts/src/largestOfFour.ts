@@ -24,8 +24,8 @@
 // push()
 
 export function largestOfFour(nums: number[][]): number[] {
-    let result: number[] = [];
-    for (let subArray of nums) {
+    const result: number[] = [];
+    for (const subArray of nums) {
         result.push(Math.max(...subArray));
     }
     return result;

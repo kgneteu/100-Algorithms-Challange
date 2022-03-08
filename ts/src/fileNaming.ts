@@ -27,7 +27,7 @@ export function fileNaming(names: string[]): string[] {
     for (const name of names) {
         if (result.includes(name)) {
             for (let i = 1; i < 1000; i++) {
-                let newName = `${name}(${i})`
+                const newName = `${name}(${i})`
                 if (!result.includes(newName)) {
                     result.push(newName)
                     break;

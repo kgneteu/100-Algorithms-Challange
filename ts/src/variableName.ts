@@ -27,13 +27,13 @@
 export function variableName(name: string): boolean {
     const validChars = "0123456789_abcdefghijklmnopqrstuvwxyz";
     if (name === "") return false;
-    for (let c of name.split("")) {
+    for (const c of name.split("")) {
         if (!validChars.includes(c.toLowerCase())) return false;
     }
     const firstLetter = validChars.indexOf(name[0].toLowerCase())
     return firstLetter > 9;
     //todo regexpr
-   // return /^[a-z_]\w*$/i.test(name)
+    // return /^[a-z_]\w*$/i.test(name)
 }
 
 console.log(variableName("GoodKing"))
