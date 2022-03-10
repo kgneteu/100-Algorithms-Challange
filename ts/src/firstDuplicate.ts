@@ -41,6 +41,23 @@ export function firstDuplicate(a: number[]): number {
         }
     }
     return -1;
+
+    // too slow
+    // let duplicate = -1;
+    // let minIndex = a.length;
+    //
+    // for (let i = 0; i < a.length - 1; i++) {
+    //     const index = a.indexOf(a[i], i + 1);
+    //     if (index !== -1) {
+    //         if (index < minIndex) {
+    //             minIndex = index;
+    //             duplicate = a[i];
+    //         }
+    //     }
+    // }
+    // return duplicate;
 }
 
+console.log(firstDuplicate([2, 1, 3, 5, 3, 2]))
+//console.log(firstDuplicate([1, 1, 2, 2, 1]))
 

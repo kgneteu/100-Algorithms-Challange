@@ -1,6 +1,7 @@
 import {crosswordFormation} from '../src/crosswordFormation';
 
 describe(crosswordFormation.name, () => {
+    beforeEach(() => jest.resetModules());
     it('Test 1', () => {
         const data = ["crossword", "square", "formation", "something"];
         const response = crosswordFormation(data);
