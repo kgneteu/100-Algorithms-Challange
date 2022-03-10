@@ -25,4 +25,22 @@ describe(pagesNumberingWithInk.name, () => {
         const response = pagesNumberingWithInk(current, numberOfDigits);
         expect(response).toBe(10222);
     });
+    it('Test 5', () => {
+        const current = 10;
+        const numberOfDigits = 3;
+        const response = pagesNumberingWithInk(current, numberOfDigits);
+        expect(response).toBe(10);
+    });
+    it('Test 6', () => {
+        const current = 76;
+        const numberOfDigits = 250;
+        const response = pagesNumberingWithInk(current, numberOfDigits);
+        expect(response).toBe(166);
+    });
+    it('Test 7', () => {
+        const current = 80;
+        const numberOfDigits = 1000;
+        const response = pagesNumberingWithInk(current, numberOfDigits);
+        expect(response).toBe(419);
+    });
 });

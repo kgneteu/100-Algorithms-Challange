@@ -18,4 +18,10 @@ describe(companyBotStrategy.name, () => {
         const response = companyBotStrategy(data);
         expect(response).toBe(0);
     });
+
+    it('Test 4', () => {
+        const data = [[3, 1], [6, 1], [4, -1], [5, 1]];
+        const response = companyBotStrategy(data);
+        expect(response).toBe(4.666666666666667);
+    });
 });
