@@ -18,4 +18,16 @@ describe(isTandemRepeat.name, () => {
         const response = isTandemRepeat(inputString);
         expect(response).toBe(false);
     });
+
+    it('Test 4', () => {
+        const inputString = 'hophey';
+        const response = isTandemRepeat(inputString);
+        expect(response).toBe(false);
+    });
+
+    it('Test 5', () => {
+        const inputString = 'interestinterest';
+        const response = isTandemRepeat(inputString);
+        expect(response).toBe(true);
+    });
 });
