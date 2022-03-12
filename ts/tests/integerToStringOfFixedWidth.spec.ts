@@ -16,9 +16,23 @@ describe(integerToStringOfFixedWidth.name, () => {
     });
 
     it('Test 3', () => {
-        const number = 1234;
-        const width = 5;
+        const number = 0;
+        const width = 1;
         const response = integerToStringOfFixedWidth(number, width);
-        expect(response).toBe('01234');
+        expect(response).toBe('0');
+    });
+
+    it('Test 4', () => {
+        const number = 89;
+        const width = 4;
+        const response = integerToStringOfFixedWidth(number, width);
+        expect(response).toBe("0089");
+    });
+
+    it('Test 5', () => {
+        const number = 23456;
+        const width = 4;
+        const response = integerToStringOfFixedWidth(number, width);
+        expect(response).toBe('3456');
     });
 });

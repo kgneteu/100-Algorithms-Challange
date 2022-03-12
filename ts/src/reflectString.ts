@@ -30,6 +30,8 @@ export function reflectString(inputString: string): string {
     const firstLetter = "a".charCodeAt(0);
     const lastLetter = "z".charCodeAt(0);
 
-    return inputString.split("").map(c => String.fromCharCode(firstLetter + lastLetter - c.charCodeAt(0))).join("")
+    return inputString.split("")
+        .map(c => String.fromCharCode(firstLetter + lastLetter - c.charCodeAt(0)))
+        .join("")
 }
 

@@ -52,4 +52,4 @@ export function newNumeralSystem(number: string): string[] {
     return result;
 }
 
-console.log(newNumeralSystem('A'));
+//console.log(newNumeralSystem('A'));

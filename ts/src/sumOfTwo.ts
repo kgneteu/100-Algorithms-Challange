@@ -35,10 +35,21 @@
 // true if there are two elements from a and b which add up to v, and false otherwise.
 
 export function sumOfTwo(a: number[], b: number[], v: number): boolean {
-    for (const n1 of a) {
-        for (const n2 of b) {
-            if (n1 + n2 === v) return true;
+    //too slow
+    // for (const n1 of a) {
+    //     for (const n2 of b) {
+    //         if (n1 + n2 === v) return true;
+    //     }
+    // }
+    // return false;
+    
+    const a1 = new Set(a);
+    const b1 = new Set(b);
+    for (const n1 of a1) {
+        if (b1.has(v - n1)) {
+            return true;
         }
+
     }
     return false;
 }

@@ -36,15 +36,17 @@
 
 export function houseOfCats(legs: number): number[] {
     const peoples: number[] = []
+    if (legs < 2) return [0];
     if (legs === 2) return [1];
     while (legs > 0) {
-        peoples.unshift(legs / 2 )
+        peoples.unshift(legs / 2)
         legs -= 4;
     }
+    if (legs === 0) peoples.unshift(0)
     return peoples;
 }
 
-// console.log(houseOfCats(6));
-// console.log(houseOfCats(2));
+//console.log(houseOfCats(1));
+//console.log(houseOfCats(8));
 // console.log(houseOfCats(12));
 // console.log(houseOfCats(40));
