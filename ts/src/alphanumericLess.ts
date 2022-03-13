@@ -77,34 +77,50 @@
 // true if s1 is alphanumerically strictly less than s2, false otherwise.
 
 export function alphanumericLess(s1: string, s2: string): boolean {
-    const t1 = s1.match(/\d+|\D/g)
-    const t2 = s2.match(/\d+|\D/g)
-    const min = Math.min(t1.length, t2.length);
-    for (let i = 0; i < min; i++) {
-        let a: string | number | BigInt = t1[i];
-        let b: string | number | BigInt = t2[i];
-        if (!isNaN(+a)) {
-            if (isNaN(+b)) return true;
-            a = BigInt(a);
-            b = BigInt(b);
-        } else {
-            if (!isNaN(+t2[i])) return false;
-        }
-        if (a > b) return false;
-        if (a < b) return true;
-    }
-    if (t1.length != t2.length) return t1.length < t2.length;
+    // const t1 = s1.match(/\d+|\D/g)
+    // const t2 = s2.match(/\d+|\D/g)
+    // const min = Math.min(t1.length, t2.length);
+    // for (let i = 0; i < min; i++) {
+    //     let a: string | number | BigInt = t1[i];
+    //     let b: string | number | BigInt = t2[i];
+    //     if (!isNaN(+a)) {
+    //         if (isNaN(+b)) return true;
+    //         a = BigInt(a);
+    //         b = BigInt(b);
+    //     } else {
+    //         if (!isNaN(+t2[i])) return false;
+    //     }
+    //     if (a > b) return false;
+    //     if (a < b) return true;
+    // }
+    // if (t1.length != t2.length) return t1.length < t2.length;
+    //
+    // for (let i = 0; i < min; i++) {
+    //     if (!isNaN(+t1[i])) {
+    //         let a = (t1[i].match(/^0+/g) || []).toString()
+    //         let b = (t2[i].match(/^0+/g) || []).toString()
+    //         if (a.length > b.length) return true;
+    //         if (a.length < b.length) return false;
+    //     }
+    // }
+    // return false;
 
-    for (let i = 0; i < min; i++) {
-        if (!isNaN(+t1[i])) {
-            let a = (t1[i].match(/^0+/g) || []).toString()
-            let b = (t2[i].match(/^0+/g) || []).toString()
-            if (a.length > b.length) return true;
-            if (a.length < b.length) return false;
-        }
-    }
-    return false;
+    //Better alt
+    let t1 = s1.replace(/\d+/g, a => a.padStart(20, '0'))
+    let t2 = s2.replace(/\d+/g, a => a.padStart(20, '0'))
+    //console.log(x1, x2)
+    if (t1 < t2) return true
+    if (t1 > t2) return false
+    //console.log(s1.padEnd(20, "Z"),s2.padEnd(20, "Z"))
+    return s1.padEnd(20, "Z") < s2.padEnd(20, "Z")
 }
+
+// console.log(alphanumericLess("0000", "000"))
+// console.log(alphanumericLess("000", "0000"))
+
+// const solution = (s1, s2) =>
+//     (fn => fn(s1) < fn(s2) ? true : fn(s1) > fn(s2) ? false : s1.padEnd(20, `Z`) < s2.padEnd(20, `Z`))
+//     (str => str.replace(/\d+/g, val => val.padStart(20, 0)));
 
 // console.log(alphanumericLess("ab01c004", "ab000144x"))
 // console.log(alphanumericLess("ab", "a1"))
