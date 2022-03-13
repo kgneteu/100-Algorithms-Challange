@@ -26,10 +26,11 @@
 //     [output] array.integer
 
 export function extractMatrixColumn(matrix: number[][], column: number): number[] {
-    const col: number[] = []
-    for (const row of matrix) {
-        col.push(row[column])
-    }
-    return col;
+    // const col: number[] = []
+    // for (const row of matrix) {
+    //     col.push(row[column])
+    // }
+    // return col;
+    return matrix.map(m => m[column])
 }
 

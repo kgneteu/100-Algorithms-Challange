@@ -19,4 +19,22 @@ describe(bishopAndPawn.name, () => {
         const response = bishopAndPawn(position1, position2);
         expect(response).toBe(true);
     });
+    it('Test 4', () => {
+        const position1 = 'g1';
+        const position2 = 'f3';
+        const response = bishopAndPawn(position1, position2);
+        expect(response).toBe(false);
+    });
+    it('Test 5', () => {
+        const position1 = 'e7';
+        const position2 = 'd6';
+        const response = bishopAndPawn(position1, position2);
+        expect(response).toBe(true);
+    });
+    it('Test 6', () => {
+        const position1 = 'e7';
+        const position2 = 'a3';
+        const response = bishopAndPawn(position1, position2);
+        expect(response).toBe(true);
+    });
 });
