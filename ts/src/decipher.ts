@@ -33,7 +33,7 @@
 //
 //     [output] string
 
-function decipher(cipher: string): string {
+export function decipher(cipher: string): string {
     // let i = 0;
     // let result = ""
     // while (i < cipher.length) {
@@ -51,4 +51,4 @@ function decipher(cipher: string): string {
 
 }
 
-console.log(decipher("10197115121"))
+//console.log(decipher("10197115121"))

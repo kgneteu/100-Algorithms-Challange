@@ -30,11 +30,11 @@
 //     1 ≤ s.length < 10.
 //
 //     [output] integer
-//todo rethink refactor 
+//todo rethink refactor
 export function constructSquare(s: string): number {
     let min = Number("1" + Array(Math.floor((s.length - 1) / 2)).fill(0).join(""));
     let max = Number(Array(Math.ceil(s.length / 2)).fill(9).join(""));
-    console.log(min, max)
+
     let d = getDigitsCount(s);
     for (let i = max + 1; i >= min - 1; i--) {
         if (getDigitsCount(String(i * i)) === d) return i * i;
@@ -51,4 +51,4 @@ export function constructSquare(s: string): number {
     }
 }
 
-console.log(constructSquare(""))
+//console.log(constructSquare(" "))

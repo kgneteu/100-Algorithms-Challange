@@ -25,11 +25,11 @@
 //
 // String s with pairs of adjacent words swapped.
 
-function swapAdjacentWords(s: string): string {
+export function swapAdjacentWords(s: string): string {
     //return s.replace(/(\w+).(\w+)/g, (w) => w.split(/\s/).reverse().join(" "))
     return s.replace(/(\S+)\s(\S+)/g, "$2 $1");
 }
 
 
 //console.log(swapAdjacentWords("On CodeFight"))
-console.log(swapAdjacentWords("How are you today guys"))
+//console.log(swapAdjacentWords("How are you today guys"))

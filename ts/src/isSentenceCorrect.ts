@@ -31,7 +31,7 @@
 //     [output] boolean
 //
 // true if the given sentence is correct, false otherwise.
-function isSentenceCorrect(sentence:string):boolean {
+export function isSentenceCorrect(sentence:string):boolean {
     let re = /^[A-Z][^\.\?!]*[\.\?!]$/;
     return re.test(sentence);
 }
